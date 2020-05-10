@@ -1,0 +1,6 @@
+framework module Pods_Quaranteen_Project_Quaranteen_ProjectUITests {
+  umbrella header "Pods-Quaranteen Project-Quaranteen ProjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
