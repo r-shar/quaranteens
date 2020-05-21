@@ -8,10 +8,15 @@
 
 import UIKit
 
+struct Card {
+    var num: Int
+    var des: String
+}
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     
+    @IBOutlet weak var challengeNum: UILabel!
     @IBOutlet weak var challengeCard: UIView!
     
     @IBOutlet weak var cardTitle: UILabel!
@@ -22,13 +27,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var doneLabel: UILabel!
     
     @IBOutlet weak var challengePic: UIImageView! // figure out way to add to user's photo gallery then add to photo gallery view
+    
+    // create array to store multiple challenge cards
+    var challenges = [Card]()
+    
+    var currentIndex = 0
+    // create array of descriptions
+    var descriptions: [String] = ["Cook a vegetarian meal for your family.", "Bake banana bread.", "Make Dalgona coffee.", "Make your own pasta."]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
         // Do any additional setup after loading the view, typically from a nib.
-    
+        createCards()
+        
+       // readCardsFromDisk()       DON'T NEED THIS YET, MAYBE LATER WHEN TRACKING PROGRESS
+        
         challengeCard.backgroundColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
         challengeCard.layer.cornerRadius = 20.0
         cardTitle.layer.cornerRadius = 20.0
@@ -44,12 +60,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         doneLabel.clipsToBounds = true
         doneLabel.backgroundColor = UIColor(red: 0.33, green: 0.77, blue: 0.42, alpha: 1.00)
         addPicButton.layer.cornerRadius = 16.0
-    
+        //challengeNum.layer.isOpaque = true  FIGURE OUT OPACITY OF TEXT
+        
+        
     }
 
-    
     @IBAction func tapDone(_ sender: Any) {
         doneButton.isHidden = true
+        // move to next challenge card
+        currentIndex = currentIndex + 1
+        
+        // update labels
+        updateLabels()
+        
+        // update done button
+        updateDoneButton()
     }
     
     @IBAction func tapAddPic(_ sender: Any) {
@@ -98,5 +123,62 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // REMEMBER TO STATE REASON AS TO WHY WE NEED TO ACCESS
     // USER'S PHOTO LIBRARY AND/OR CAMERA
     // DONE IN INFO.PLIST
+    
+    func createCards() {
+        var i: Int = 1
+        print("size des ", descriptions.count)
+        for index in 0...descriptions.count - 1 {
+            
+            let cCard = Card(num: i, des: descriptions[index])
+            challenges.append(cCard)
+            i += 1
+        }
+    }
+    // store array of challenge cards to disk
+    
+    // convert array of cards to dictionary so that userdefaults can save the structure
+    func saveCardsToDisk() {
+        UserDefaults.standard.set(challenges, forKey: "challenges")
+        
+        let dictArray = challenges.map { (card) -> [String:Any] in
+            return ["description": card.des, "num": card.num]
+        }
+        
+        // save dictionary to disk
+        UserDefaults.standard.set(dictArray, forKey: "challenges")
+    }
+    
+    // read from disk
+    // may need this function when tracking progress
+    func readCardsFromDisk(){
+        // check to see if there are saved cards
+        if let dictArray = UserDefaults.standard.array(forKey: "challenges") as? [[String:Any]] {
+            
+            let savedCards = dictArray.map { dictionary -> Card in return Card(num: dictionary["num"] as! Int, des: dictionary["description"] as! String )
+                
+            }
+            // load saved cards into array
+            challenges.append(contentsOf: savedCards)
+        }
+    }
+    
+    func updateLabels() {
+        //print(currentIndex)
+        //print(challenges.count)
+        if currentIndex >= challenges.count {
+            print("No more challenges")
+        }
+        else{
+            let currentCard = challenges[currentIndex]
+        
+        cardDes.text = currentCard.des
+        challengeNum.text = String(currentCard.num)
+        }
+    }
+    
+    func updateDoneButton() {
+        
+        doneButton.isHidden = false
+        
+    }
 }
-
