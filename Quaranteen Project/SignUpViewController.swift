@@ -10,7 +10,10 @@ import UIKit
 import GoogleSignIn
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var signInButton: GIDSignInButton!
+    var signInButton = GIDSignInButton(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
