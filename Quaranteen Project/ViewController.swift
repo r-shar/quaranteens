@@ -15,6 +15,7 @@ struct Card {
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
+    @IBOutlet var challengeButtons: [UIButton]!
     
     @IBOutlet weak var challengeNum: UILabel!
     @IBOutlet weak var challengeCard: UIView!
@@ -192,5 +193,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         doneButton.isHidden = false
         
+    }
+    
+    
+    @IBAction func selectCategory(_ sender: UIButton) {
+        
+        challengeButtons.forEach { (button) in
+            UIView.animate(withDuration: 0.2) {
+                button.isHidden = !button.isHidden
+                
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    
+    @IBAction func categoryTapped(_ sender: UIButton) {
     }
 }
