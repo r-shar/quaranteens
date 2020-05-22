@@ -148,8 +148,104 @@
                                 <rect key="frame" x="195" y="277" width="182" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b5O-bu-uRx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-C8-Bgz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34803921567499996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lo0-hj-a8z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Select Challenge Category">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-z5-3pS">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="PYP-Ji-0do"/>
+                                        </constraints>
+                                        <state key="normal" title="Arts &amp; Crafts">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zae-c1-HTj">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cHf-lt-bWj"/>
+                                        </constraints>
+                                        <state key="normal" title="Cooking">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ET-qT-pIB">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vmA-YL-zyG"/>
+                                        </constraints>
+                                        <state key="normal" title="Connections">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-LB-0EQ">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="l3d-k1-Iyz"/>
+                                        </constraints>
+                                        <state key="normal" title="Fitness">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-54-VHX">
+                                        <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7c9-NZ-a2J"/>
+                                        </constraints>
+                                        <state key="normal" title="Mental Health">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-bt-O2t">
+                                        <rect key="frame" x="0.0" y="300" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FBc-0o-pio"/>
+                                        </constraints>
+                                        <state key="normal" title="Productivity">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pkx-LB-0EQ" secondAttribute="trailing" id="0fJ-V6-hx6"/>
+                                    <constraint firstItem="zae-c1-HTj" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="6kl-RG-hKy"/>
+                                    <constraint firstAttribute="trailing" secondItem="ucx-54-VHX" secondAttribute="trailing" id="7Jg-Md-BvM"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ET-qT-pIB" secondAttribute="trailing" id="7TK-3L-T9F"/>
+                                    <constraint firstItem="m2k-z5-3pS" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="BDI-9r-Ddh"/>
+                                    <constraint firstItem="2ET-qT-pIB" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="BDK-cP-RP0"/>
+                                    <constraint firstItem="YEm-C8-Bgz" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="IXU-IC-Y0T"/>
+                                    <constraint firstItem="ucx-54-VHX" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="Jqf-R0-Evu"/>
+                                    <constraint firstAttribute="trailing" secondItem="m2k-z5-3pS" secondAttribute="trailing" id="VdZ-Dm-OBd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zae-c1-HTj" secondAttribute="trailing" id="Ybz-zx-ZY9"/>
+                                    <constraint firstAttribute="trailing" secondItem="fkc-bt-O2t" secondAttribute="trailing" id="i5S-WN-KQi"/>
+                                    <constraint firstItem="fkc-bt-O2t" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="pVB-sQ-wD0"/>
+                                    <constraint firstItem="pkx-LB-0EQ" firstAttribute="leading" secondItem="b5O-bu-uRx" secondAttribute="leading" id="t3o-4e-ti4"/>
+                                    <constraint firstAttribute="trailing" secondItem="YEm-C8-Bgz" secondAttribute="trailing" id="whi-wL-8m4"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fhy-5t-D75" firstAttribute="trailing" secondItem="b5O-bu-uRx" secondAttribute="trailing" id="1h2-ot-tFR"/>
+                            <constraint firstItem="b5O-bu-uRx" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" id="GRq-om-hZj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fhy-5t-D75"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Td8-Xh-fZV">
