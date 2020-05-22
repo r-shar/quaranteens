@@ -71,6 +71,13 @@
                                         <rect key="frame" x="196" y="202" width="107" height="111"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-F6-tPY">
+                                        <rect key="frame" x="215" y="53" width="35" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95425027610000002" green="0.59998601679999997" blue="0.2438066602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -158,6 +165,7 @@
                         <outlet property="cardDes" destination="Kkv-Nv-c7J" id="glM-Se-VyP"/>
                         <outlet property="cardTitle" destination="o2e-N0-qSF" id="b9E-6m-8bb"/>
                         <outlet property="challengeCard" destination="t0M-4C-hUn" id="HJ7-gm-eAj"/>
+                        <outlet property="challengeNum" destination="c4o-F6-tPY" id="5YA-iX-3UD"/>
                         <outlet property="challengePic" destination="G0O-6o-di7" id="uwX-Z5-RXQ"/>
                         <outlet property="doneButton" destination="MGf-2M-Ef9" id="Y09-kV-Wza"/>
                         <outlet property="doneLabel" destination="5pm-Ww-boZ" id="2fj-Tp-GYZ"/>
@@ -195,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="845.75892857142856"/>
         </scene>
-        <!--View-->
+        <!--Sign Up View Controller-->
         <scene sceneID="WlI-fd-4UJ">
             <objects>
-                <viewController id="8xc-rI-dZh" userLabel="View" customClass="SignUpViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hjk-od-VsW">
+                <viewController id="8xc-rI-dZh" customClass="SignUpViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjk-od-VsW" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
