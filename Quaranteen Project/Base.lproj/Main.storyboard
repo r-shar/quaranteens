@@ -338,26 +338,105 @@
             </objects>
             <point key="canvasLocation" x="-1182.608695652174" y="143.97321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Challenge View Controller-->
         <scene sceneID="uge-iA-s3v">
             <objects>
-                <viewController id="7v3-5M-HOB" sceneMemberID="viewController">
+                <viewController id="7v3-5M-HOB" customClass="SelectChallengeViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vAH-xx-oUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-oN-PUf" userLabel="fitnessButton">
+                                <rect key="frame" x="58" y="191" width="127" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PO-Tq-kAo" userLabel="cookingButton">
+                                <rect key="frame" x="224" y="189" width="125" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiD-uC-euo" userLabel="connectionsButton">
+                                <rect key="frame" x="58" y="382" width="127" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGZ-be-zAm" userLabel="artsButton">
+                                <rect key="frame" x="224" y="382" width="125" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRt-a7-fql" userLabel="mentalButton">
+                                <rect key="frame" x="58" y="581" width="127" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-fP-ctB" userLabel="productivityButton">
+                                <rect key="frame" x="224" y="581" width="125" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Component 6 (1)"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my goals are" translatesAutoresizingMaskIntoConstraints="NO" id="wlY-eh-WJb">
+                                <rect key="frame" x="58" y="104" width="178" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiP-mj-tiT" userLabel="nextButton">
+                                <rect key="frame" x="256" y="771" width="112" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Group 73 (2)"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fitness" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-Mt-Yrb">
+                                <rect key="frame" x="91" y="314" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cooking" translatesAutoresizingMaskIntoConstraints="NO" id="Dmr-qs-fuN">
+                                <rect key="frame" x="251" y="314" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arts &amp; crafts" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-z3-3qh">
+                                <rect key="frame" x="232" y="502" width="108" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connections" translatesAutoresizingMaskIntoConstraints="NO" id="9T7-h8-QSq">
+                                <rect key="frame" x="68" y="498" width="106" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="productivity" translatesAutoresizingMaskIntoConstraints="NO" id="dgQ-7R-Md7">
+                                <rect key="frame" x="234" y="703" width="106" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mental health" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-Zr-cz2">
+                                <rect key="frame" x="60" y="703" width="122" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="br7-kB-nit"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LP-Ve-SNm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="144"/>
+            <point key="canvasLocation" x="-301.44927536231887" y="143.97321428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="Arrow 1" width="24" height="16"/>
+        <image name="Component 1" width="512" height="512"/>
+        <image name="Component 2" width="512" height="512"/>
+        <image name="Component 3" width="512" height="512"/>
+        <image name="Component 4" width="512" height="512"/>
+        <image name="Component 5" width="128" height="128"/>
+        <image name="Component 6 (1)" width="512" height="512"/>
         <image name="GROW" width="122" height="30"/>
+        <image name="Group 73 (2)" width="110" height="41"/>
+        <image name="arts &amp; crafts" width="122" height="16"/>
+        <image name="connections" width="115" height="16"/>
+        <image name="cooking" width="75" height="19"/>
+        <image name="fitness" width="64" height="16"/>
         <image name="homeIcon" width="37" height="35"/>
+        <image name="mental health" width="133" height="16"/>
+        <image name="my goals are" width="743" height="113"/>
+        <image name="productivity" width="115" height="19"/>
         <image name="profileIcon" width="28" height="28"/>
         <image name="progressIcon" width="34" height="34"/>
         <image name="settingsIcon" width="32" height="32"/>
