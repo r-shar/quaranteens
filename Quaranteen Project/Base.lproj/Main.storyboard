@@ -349,32 +349,56 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-oN-PUf" userLabel="fitnessButton">
                                 <rect key="frame" x="58" y="191" width="127" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 1"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectFitness:" destination="7v3-5M-HOB" eventType="touchUpInside" id="ZDJ-i2-VrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PO-Tq-kAo" userLabel="cookingButton">
                                 <rect key="frame" x="224" y="189" width="125" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 2"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectCooking:" destination="7v3-5M-HOB" eventType="touchUpInside" id="Ykq-xu-jUS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiD-uC-euo" userLabel="connectionsButton">
                                 <rect key="frame" x="58" y="382" width="127" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 3"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectConnections:" destination="7v3-5M-HOB" eventType="touchUpInside" id="x1i-ZN-xJr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGZ-be-zAm" userLabel="artsButton">
                                 <rect key="frame" x="224" y="382" width="125" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 4"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectArts:" destination="7v3-5M-HOB" eventType="touchUpInside" id="L36-Mq-rIY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRt-a7-fql" userLabel="mentalButton">
                                 <rect key="frame" x="58" y="581" width="127" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 5"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectMentalHealth:" destination="7v3-5M-HOB" eventType="touchUpInside" id="EcU-LC-Wij"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-fP-ctB" userLabel="productivityButton">
                                 <rect key="frame" x="224" y="581" width="125" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Component 6 (1)"/>
+                                <state key="normal" title="Button" image="Ellipse 16"/>
+                                <state key="selected" image="Ellipse 14"/>
+                                <connections>
+                                    <action selector="selectProductivity:" destination="7v3-5M-HOB" eventType="touchUpInside" id="m6f-pj-rIG"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my goals are" translatesAutoresizingMaskIntoConstraints="NO" id="wlY-eh-WJb">
                                 <rect key="frame" x="58" y="104" width="178" height="77"/>
@@ -384,6 +408,9 @@
                                 <rect key="frame" x="256" y="771" width="112" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Group 73 (2)"/>
+                                <connections>
+                                    <action selector="clickNext:" destination="7v3-5M-HOB" eventType="touchUpInside" id="4An-Sy-ZPm"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fitness" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-Mt-Yrb">
                                 <rect key="frame" x="91" y="314" width="61" height="30"/>
@@ -401,18 +428,50 @@
                                 <rect key="frame" x="68" y="498" width="106" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mental health" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-Zr-cz2">
+                                <rect key="frame" x="60" y="703" width="122" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="productivity" translatesAutoresizingMaskIntoConstraints="NO" id="dgQ-7R-Md7">
                                 <rect key="frame" x="234" y="703" width="106" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mental health" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-Zr-cz2">
-                                <rect key="frame" x="60" y="703" width="122" height="38"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sports-and-competition 1" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-vf-7IF">
+                                <rect key="frame" x="87" y="217" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="laugh 1" translatesAutoresizingMaskIntoConstraints="NO" id="17Q-ce-URW">
+                                <rect key="frame" x="87" y="409" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="craft 1" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-zo-LZ9">
+                                <rect key="frame" x="253" y="409" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="people 1" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-lG-aY7">
+                                <rect key="frame" x="87" y="610" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kitchen-pack 1" translatesAutoresizingMaskIntoConstraints="NO" id="2Mb-xF-ZFr">
+                                <rect key="frame" x="252" y="217" width="68" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seo-and-web (1) 1" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-tW-uJi">
+                                <rect key="frame" x="252" y="610" width="68" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="br7-kB-nit"/>
                     </view>
+                    <connections>
+                        <outlet property="artsButton" destination="mGZ-be-zAm" id="PXt-PX-MNy"/>
+                        <outlet property="connectionsButton" destination="BiD-uC-euo" id="TnP-Ye-QPF"/>
+                        <outlet property="cookingButton" destination="6PO-Tq-kAo" id="Uab-ux-j0e"/>
+                        <outlet property="fitnessButton" destination="bR1-oN-PUf" id="3uq-Qf-Za8"/>
+                        <outlet property="mentalHealthButton" destination="XRt-a7-fql" id="F2e-RO-CGL"/>
+                        <outlet property="productivityButton" destination="hcb-fP-ctB" id="hqb-Ab-Ogp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LP-Ve-SNm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -421,25 +480,27 @@
     </scenes>
     <resources>
         <image name="Arrow 1" width="24" height="16"/>
-        <image name="Component 1" width="512" height="512"/>
-        <image name="Component 2" width="512" height="512"/>
-        <image name="Component 3" width="512" height="512"/>
-        <image name="Component 4" width="512" height="512"/>
-        <image name="Component 5" width="128" height="128"/>
-        <image name="Component 6 (1)" width="512" height="512"/>
+        <image name="Ellipse 14" width="128" height="128"/>
+        <image name="Ellipse 16" width="128" height="128"/>
         <image name="GROW" width="122" height="30"/>
         <image name="Group 73 (2)" width="110" height="41"/>
         <image name="arts &amp; crafts" width="122" height="16"/>
         <image name="connections" width="115" height="16"/>
         <image name="cooking" width="75" height="19"/>
+        <image name="craft 1" width="64" height="64"/>
         <image name="fitness" width="64" height="16"/>
         <image name="homeIcon" width="37" height="35"/>
+        <image name="kitchen-pack 1" width="63" height="63"/>
+        <image name="laugh 1" width="68" height="68"/>
         <image name="mental health" width="133" height="16"/>
         <image name="my goals are" width="743" height="113"/>
+        <image name="people 1" width="64" height="64"/>
         <image name="productivity" width="115" height="19"/>
         <image name="profileIcon" width="28" height="28"/>
         <image name="progressIcon" width="34" height="34"/>
+        <image name="seo-and-web (1) 1" width="68" height="68"/>
         <image name="settingsIcon" width="32" height="32"/>
+        <image name="sports-and-competition 1" width="66" height="66"/>
         <image name="streakBar4" width="375" height="29"/>
         <image name="superFrog" width="157" height="158"/>
     </resources>
