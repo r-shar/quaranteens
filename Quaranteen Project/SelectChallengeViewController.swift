@@ -17,6 +17,9 @@ class SelectChallengeViewController: UIViewController {
     @IBOutlet weak var productivityButton: UIButton!
     @IBOutlet weak var artsButton: UIButton!
     
+    let defaults = UserDefaults.standard
+
+    
     @IBAction func selectCooking(_ sender: Any) {
         //change whether it's selected:
         if (cookingButton.isSelected) {
@@ -66,8 +69,30 @@ class SelectChallengeViewController: UIViewController {
         }
     }
     
-    /*When user clicks next button, check which buttons are selected and store those in userDefaults */
+    /*When user clicks next button, check which buttons are selected and store those in userDefaults under keyname goals */
     @IBAction func clickNext(_ sender: Any) {
+        var goals = [String]()
+        if (fitnessButton.isSelected) {
+            goals.append("fitness")
+        }
+        if (mentalHealthButton.isSelected) {
+            goals.append("mentalhealth")
+        }
+        if (connectionsButton.isSelected) {
+            goals.append("connections")
+        }
+        if (cookingButton.isSelected) {
+            goals.append("cooking")
+        }
+        if (productivityButton.isSelected) {
+            goals.append("productivity")
+        }
+        if (artsButton.isSelected) {
+            goals.append("arts")
+        }
+        
+        //add array to user defaults:
+        defaults.set(goals, forKey: "goals")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
