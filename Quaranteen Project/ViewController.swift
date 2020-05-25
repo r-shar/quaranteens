@@ -15,6 +15,8 @@ struct Card {
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
+    @IBOutlet weak var selectCatButton: UIButton!
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet var challengeButtons: [UIButton]!
     
     @IBOutlet weak var challengeNum: UILabel!
@@ -75,6 +77,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         addPicButton.layer.cornerRadius = 16.0
         //challengeNum.layer.isOpaque = true  FIGURE OUT OPACITY OF TEXT
         
+        stackView.spacing = 0.0
+        challengeButtons.forEach { (button) in
+            button.backgroundColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
+        }
+        
+        selectCatButton.backgroundColor = UIColor(red: 0.33, green: 0.77, blue: 0.42, alpha: 1.00)
         
     }
 
@@ -195,19 +203,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    
-    @IBAction func selectCategory(_ sender: UIButton) {
-        
+    @IBAction func handleSelection(_ sender: UIButton) {
         challengeButtons.forEach { (button) in
             UIView.animate(withDuration: 0.2) {
                 button.isHidden = !button.isHidden
-                
                 self.view.layoutIfNeeded()
             }
         }
     }
     
-    
-    @IBAction func categoryTapped(_ sender: UIButton) {
+    //what to do when a challenge category is selected
+    // we want to display different challenge deck (switch array) 
+    @IBAction func cityTapped(_ sender: UIButton) {
     }
+    
 }
