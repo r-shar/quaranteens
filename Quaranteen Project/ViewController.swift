@@ -38,15 +38,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // create array of challenges
     var foodChallenges: [String] = ["Cook a vegetarian meal for your family.", "Bake banana bread.", "Make Dalgona coffee.", "Make your own pasta."]
     
-    var exerciseChallenges: [String] = ["Do mountain climbers for one minute", "Do 20 pushups", "Learn a tiktok dance", "Go on a run around your neighborhood", "Do 10 burpies followed by 20 squats"]
+    var exerciseChallenges: [String] = ["Do mountain climbers for one minute.", "Do 20 pushups.", "Learn a tiktok dance.", "Go on a run around your neighborhood.", "Do 10 burpies followed by 20 squats."]
     
-    var connectChallenges: [String] = ["Reconnect with an old friend", "Send an appreciation email to your favorite teacher", "Video chat with your friends", "Watch a movie with friends", "Invite and play an online multiplayer game with your friends (check out Skribbl)"]
+    var connectChallenges: [String] = ["Reconnect with an old friend.", "Send an appreciation email to your favorite teacher.", "Video chat with your friends.", "Watch a movie with friends.", "Invite and play an online multiplayer game with your friends (check out Skribbl)."]
     
-    var mhChalenges: [String] = ["Journal for 15 minutes", "Make a note of five things you are grateful for", "Meditate for 15 minutes", "Write a letter to your future self", "Draw something random", "Start a gratitude journal", "Make a dream board", "Write a letter to your past self", "Meditate for 10 minutes", "Say three affirmations", "Go on a walk to increase endorphins", "Spend an hour away from any screens"]
+    var mhChalenges: [String] = ["Journal for 15 minutes.", "Make a note of five things you are grateful for.", "Meditate for 15 minutes.", "Write a letter to your future self.", "Draw something random.", "Start a gratitude journal.", "Make a dream board.", "Write a letter to your past self.", "Meditate for 10 minutes.", "Say three affirmations.", "Go on a walk to increase endorphins.", "Spend an hour away from any screens."]
     
-    var workChallenges: [String] = ["Make a to-do list for the week (and try your best to follow through with it!)", "Read 30 pages (and try to do it daily!)", "Turn off your devices and focus on your work for an hour"]
+    var workChallenges: [String] = ["Make a to-do list for the week (and try your best to follow through with it!)", "Read 30 pages (and try to do it daily!)", "Turn off your devices and focus on your work for an hour."]
     
-    var diyChallenges: [String] = ["Try following an origami video", "Draw your favorite movie or TV show character", "Draw a self portrait"]
+    var diyChallenges: [String] = ["Try following an origami video.", "Draw your favorite movie or TV show character.", "Draw a self portrait."]
     
     
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         // Do any additional setup after loading the view, typically from a nib.
-        createCards()
+        createCards(catArray: foodChallenges)
         
        // readCardsFromDisk()       DON'T NEED THIS YET, MAYBE LATER WHEN TRACKING PROGRESS
         
@@ -145,16 +145,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // USER'S PHOTO LIBRARY AND/OR CAMERA
     // DONE IN INFO.PLIST
     
-    func createCards() {
+    func createCards(catArray: Array<String>) {
+        
         var i: Int = 1
-        print("size des ", foodChallenges.count)
-        for index in 0...foodChallenges.count - 1 {
-            
-            let cCard = Card(num: i, des: foodChallenges[index])
-            challenges.append(cCard)
-            i += 1
+            // print("size des ", foodChallenges.count)
+            for index in 0...catArray.count - 1 {
+                
+                let cCard = Card(num: i, des: catArray[index])
+                challenges.append(cCard)
+                i += 1
+            }
         }
-    }
+       
+    
     // store array of challenge cards to disk
     
     // convert array of cards to dictionary so that userdefaults can save the structure
@@ -213,8 +216,76 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //what to do when a challenge category is selected
-    // we want to display different challenge deck (switch array) 
+    // we want to display different challenge deck (switch array)
+    enum Categories: String {
+        case artsNCrafts = "Arts & Crafts"
+        case cooking = "Cooking"
+        case connections = "Connections"
+        case fitness = "Fitness"
+        case mentalHealth = "Mental Health"
+        case productivity = "Productivity"
+    }
     @IBAction func cityTapped(_ sender: UIButton) {
+        guard let categoryTitle = sender.currentTitle, let category = Categories(rawValue: categoryTitle) else {
+            return
+        }
+        
+        switch category {
+        case .artsNCrafts:
+            selectCatButton.setTitle("ARTS & CRAFTS", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: diyChallenges)
+            updateLabels()
+            updateDoneButton()
+        case .connections:
+            selectCatButton.setTitle("CONNECTIONS", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: connectChallenges)
+            updateLabels()
+            updateDoneButton()
+        case .cooking:
+            selectCatButton.setTitle("COOKING", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: foodChallenges)
+            updateLabels()
+            updateDoneButton()
+        case .fitness:
+            selectCatButton.setTitle("FITNESS", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: exerciseChallenges)
+            updateLabels()
+            updateDoneButton()
+        case .mentalHealth:
+            selectCatButton.setTitle("MENTAL HEALTH", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: mhChalenges)
+            updateLabels()
+            updateDoneButton()
+        case .productivity:
+            selectCatButton.setTitle("PRODUCTIVITY", for: .normal)
+            challenges.removeAll()
+            currentIndex = 0
+            
+            createCards(catArray: workChallenges)
+            updateLabels()
+            updateDoneButton()
+        }
+    challengeButtons.forEach { (button) in
+        UIView.animate(withDuration: 0.2) {
+            button.isHidden = !button.isHidden
+            self.view.layoutIfNeeded()
+        }
+    }
     }
     
 }
