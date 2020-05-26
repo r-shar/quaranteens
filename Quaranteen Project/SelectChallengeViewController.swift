@@ -46,6 +46,7 @@ class SelectChallengeViewController: UIViewController {
     }
     
     /*When user clicks next button, check which buttons are selected and store those in userDefaults under keyname goals */
+    //try to limit number of goals to 3, make sure that they select at least 1 challenge
     @IBAction func clickNext(_ sender: Any) {
         var goals = [String]()
         if (fitnessButton.isSelected) {
