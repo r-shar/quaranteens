@@ -31,6 +31,7 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "category")
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
         }
     }
     

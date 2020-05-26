@@ -24,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
+        let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
+        
+        if (loggedIn) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "challenge") as? UINavigationController
+            self.window?.rootViewController = vc
+        }
         
         return true
     }

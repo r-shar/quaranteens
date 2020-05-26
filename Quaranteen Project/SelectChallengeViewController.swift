@@ -22,51 +22,27 @@ class SelectChallengeViewController: UIViewController {
     
     @IBAction func selectCooking(_ sender: Any) {
         //change whether it's selected:
-        if (cookingButton.isSelected) {
-            cookingButton.isSelected = false
-        } else {
-            cookingButton.isSelected = true
-        }
+        cookingButton.isSelected = !cookingButton.isSelected
     }
     
     @IBAction func selectFitness(_ sender: Any) {
-        if (fitnessButton.isSelected) {
-            fitnessButton.isSelected = false
-        } else {
-            fitnessButton.isSelected = true
-        }
+        fitnessButton.isSelected = !fitnessButton.isSelected
     }
     
     @IBAction func selectConnections(_ sender: Any) {
-        if (connectionsButton.isSelected) {
-            connectionsButton.isSelected = false
-        } else {
-            connectionsButton.isSelected = true
-        }
+        connectionsButton.isSelected = !connectionsButton.isSelected
     }
     
     @IBAction func selectArts(_ sender: Any) {
-        if (artsButton.isSelected) {
-            artsButton.isSelected = false
-        } else {
-            artsButton.isSelected = true
-        }
+        artsButton.isSelected = !artsButton.isSelected
     }
     
     @IBAction func selectMentalHealth(_ sender: Any) {
-        if (mentalHealthButton.isSelected) {
-            mentalHealthButton.isSelected = false
-        } else {
-            mentalHealthButton.isSelected = true
-        }
+        mentalHealthButton.isSelected = !mentalHealthButton.isSelected
     }
     
     @IBAction func selectProductivity(_ sender: Any) {
-        if (productivityButton.isSelected) {
-            productivityButton.isSelected = false
-        } else {
-            productivityButton.isSelected = true
-        }
+        productivityButton.isSelected = !productivityButton.isSelected
     }
     
     /*When user clicks next button, check which buttons are selected and store those in userDefaults under keyname goals */
