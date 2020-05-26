@@ -7,6 +7,9 @@ target 'Quaranteen Project' do
 
   # Pods for Quaranteen Project
   pod 'GoogleSignIn'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
 
   target 'Quaranteen ProjectTests' do
     inherit! :search_paths

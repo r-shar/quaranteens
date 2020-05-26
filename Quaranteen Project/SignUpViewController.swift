@@ -8,8 +8,9 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, GIDSignInDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,8 +18,20 @@ class SignUpViewController: UIViewController {
         
         //Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-        
+        GIDSignIn.sharedInstance()?.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+          withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "category")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
 

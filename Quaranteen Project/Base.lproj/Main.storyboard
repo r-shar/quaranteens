@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMm-Tv-fyF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController title="Home View Controller" id="v1x-xZ-Zez" customClass="ViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d4D-EB-5VA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-4C-hUn" userLabel="challengeCard">
@@ -82,7 +82,7 @@
                                 <color key="backgroundColor" red="0.95425027610000002" green="0.59998601679999997" blue="0.2438066602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVM-1k-8Iw">
-                                <rect key="frame" x="0.0" y="800" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="746" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="homeIcon" style="plain" id="gqi-fF-BrV" userLabel="homeButton">
@@ -292,10 +292,11 @@
         <!--Navigation Controller-->
         <scene sceneID="4tX-pS-u7v">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zMm-Tv-fyF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="challenge" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zMm-Tv-fyF" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LOG-mB-LZR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OZr-Ja-NUr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -310,7 +311,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="WlI-fd-4UJ">
             <objects>
-                <viewController id="8xc-rI-dZh" customClass="SignUpViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8xc-rI-dZh" customClass="SignUpViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjk-od-VsW" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +342,7 @@
         <!--Select Challenge View Controller-->
         <scene sceneID="uge-iA-s3v">
             <objects>
-                <viewController id="7v3-5M-HOB" customClass="SelectChallengeViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="category" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7v3-5M-HOB" customClass="SelectChallengeViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vAH-xx-oUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,6 +385,9 @@
                                 <rect key="frame" x="256" y="771" width="112" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Group 73 (2)"/>
+                                <connections>
+                                    <segue destination="zMm-Tv-fyF" kind="show" id="2Uv-w8-vQr"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fitness" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-Mt-Yrb">
                                 <rect key="frame" x="91" y="314" width="61" height="30"/>
