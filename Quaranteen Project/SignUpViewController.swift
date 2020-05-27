@@ -32,6 +32,20 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             UserDefaults.standard.set(true, forKey: "hasLoggedIn")
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            let userId = user.userID                  // For client-side use only!
+            let givenName = user.profile.givenName
+            let email = user.profile.email
+            
+            let dimension = round(100 * UIScreen.main.scale)
+            let pic = user.profile.imageURL(withDimension: UInt(dimension))
+            
+            ref.child("users").child(userId!).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
+            
+            
         }
     }
     
