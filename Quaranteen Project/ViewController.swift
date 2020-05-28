@@ -31,6 +31,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var challengePic: UIImageView! // figure out way to add to user's photo gallery then add to photo gallery view
     
+    
+    
     // create array to store multiple challenge cards
     var challenges = [Card]()
     

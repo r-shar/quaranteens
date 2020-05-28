@@ -28,10 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         if (loggedIn) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "challenge") as? UINavigationController
+            let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
             self.window?.rootViewController = vc
         }
         
+        // for tab bar and tab bar button appearance
+        UITabBar.appearance().tintColor = .darkGray
         return true
     }
     
