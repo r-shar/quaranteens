@@ -60,6 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
        // readCardsFromDisk()       DON'T NEED THIS YET, MAYBE LATER WHEN TRACKING PROGRESS
         
+        self.doneView.layer.cornerRadius = 20.0
         challengeCard.backgroundColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
         challengeCard.layer.cornerRadius = 20.0
         cardTitle.layer.cornerRadius = 20.0
@@ -85,9 +86,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         selectCatButton.backgroundColor = UIColor(red: 0.33, green: 0.77, blue: 0.42, alpha: 1.00)
         
     }
-
+    
+    @IBOutlet var doneView: UIView!
+    
     @IBAction func tapDone(_ sender: Any) {
+        
         doneButton.isHidden = true
+        self.view.addSubview(doneView)
+        doneView.center = self.view.center
+        
+        
+    }
+    
+    @IBAction func doneViewDone(_ sender: Any) {
+        self.doneView.removeFromSuperview()
+        
         // move to next challenge card
         currentIndex = currentIndex + 1
         
@@ -97,6 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // update done button
         updateDoneButton()
     }
+    
     
     @IBAction func tapAddPic(_ sender: Any) {
         
