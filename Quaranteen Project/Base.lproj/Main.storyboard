@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ICD-fZ-iPX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -397,7 +397,7 @@
                         <viewLayoutGuide key="safeArea" id="TrO-8C-i9k"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="d89-kh-z5x">
-                        <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIg-ZL-fTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -423,7 +423,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Wv9-iW-gzE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" image="progressIcon" selectedImage="progressIcon" id="T8Y-nh-efN">
+                    <tabBarItem key="tabBarItem" title="Progress" image="icons8-in-progress-50 1" id="T8Y-nh-efN">
                         <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                 </viewController>
@@ -454,7 +454,7 @@
         <scene sceneID="4tX-pS-u7v">
             <objects>
                 <navigationController storyboardIdentifier="challenge" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zMm-Tv-fyF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="wBI-sj-Zf5">
+                    <tabBarItem key="tabBarItem" title="Home" image="Group 75" id="wBI-sj-Zf5">
                         <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -691,11 +691,11 @@
         <image name="Group 148" width="128" height="128"/>
         <image name="Group 149" width="128" height="128"/>
         <image name="Group 150" width="128" height="128"/>
+        <image name="Group 75" width="20" height="20"/>
         <image name="done button" width="110" height="41"/>
         <image name="eggs" width="188" height="188"/>
-        <image name="homeIcon" width="37" height="35"/>
+        <image name="icons8-in-progress-50 1" width="20" height="20"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="progressIcon" width="34" height="34"/>
         <image name="settingsIcon" width="32" height="32"/>
         <image name="streakBar4" width="375" height="29"/>
         <image name="superFrog" width="157" height="158"/>
