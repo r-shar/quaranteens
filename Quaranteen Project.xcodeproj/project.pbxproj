@@ -243,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */,
+				2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -285,7 +286,6 @@
 				1AC5FB59247E330D00306057 /* Login */,
 				1AC5FB58247E32FD00306057 /* Helpers */,
 				1AC5FB3C247CB3F000306057 /* fonts */,
-				2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */,
 				A414A858245117F600F79EA8 /* AppDelegate.swift */,
 				A414A85A245117F600F79EA8 /* ViewController.swift */,
 				A414A85C245117F600F79EA8 /* Main.storyboard */,
