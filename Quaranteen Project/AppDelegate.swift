@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             self.window?.rootViewController = vc
         }
         
+        // for tab bar and tab bar button appearance
+        UITabBar.appearance().tintColor = .darkGray
         return true
     }
     

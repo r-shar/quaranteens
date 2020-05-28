@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ICD-fZ-iPX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-4C-hUn" userLabel="challengeCard">
-                                <rect key="frame" x="52" y="382" width="310" height="372"/>
+                                <rect key="frame" x="52" y="382" width="310" height="323"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2e-N0-qSF" userLabel="cardTitle">
                                         <rect key="frame" x="19" y="53" width="188" height="48"/>
@@ -86,36 +86,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95425027610000002" green="0.59998601679999997" blue="0.2438066602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVM-1k-8Iw">
-                                <rect key="frame" x="0.0" y="800" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem image="homeIcon" style="plain" id="gqi-fF-BrV" userLabel="homeButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="agj-FU-OXy">
-                                            <rect key="frame" x="20" y="4.5" width="140" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="homeIcon"/>
-                                        </button>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eBu-Zh-7oB"/>
-                                    <barButtonItem style="plain" id="1Dn-22-qcY" userLabel="progressButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="btK-aU-r4G">
-                                            <rect key="frame" x="160" y="5" width="116" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="progressIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CPF-yM-0bo"/>
-                                    <barButtonItem style="plain" id="aU3-8k-Qnv" userLabel="profileButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Z7-Uq-4KG">
-                                            <rect key="frame" x="324" y="8" width="70" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="profileIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-iE-zKa">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
@@ -276,14 +246,12 @@
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="5As-zF-Xxw" secondAttribute="centerX" id="0GD-cd-ztl"/>
                             <constraint firstItem="Fhy-5t-D75" firstAttribute="trailing" secondItem="Fba-mM-XER" secondAttribute="trailing" id="57c-rc-jMD"/>
                             <constraint firstItem="5As-zF-Xxw" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="9m0-1H-Ijv"/>
-                            <constraint firstItem="xVM-1k-8Iw" firstAttribute="top" secondItem="t0M-4C-hUn" secondAttribute="bottom" constant="46" id="B41-ck-0uy"/>
-                            <constraint firstItem="Fhy-5t-D75" firstAttribute="bottom" secondItem="xVM-1k-8Iw" secondAttribute="bottom" constant="18" id="EV9-Gz-K6X"/>
                             <constraint firstItem="8K0-v0-ZDl" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="155" id="F3Y-a3-tCX"/>
                             <constraint firstItem="Fba-mM-XER" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" id="Fz4-Gn-WbS"/>
                             <constraint firstItem="N6T-ZC-0zR" firstAttribute="top" secondItem="8K0-v0-ZDl" secondAttribute="bottom" constant="58" id="Hhm-Xy-6ZP"/>
                             <constraint firstItem="t0M-4C-hUn" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="52" id="Hpx-2x-JR4"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="leading" secondItem="xVM-1k-8Iw" secondAttribute="leading" id="IEl-RW-94H"/>
                             <constraint firstItem="5As-zF-Xxw" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="142" id="KjQ-q7-aGL"/>
+                            <constraint firstItem="Fhy-5t-D75" firstAttribute="bottom" secondItem="t0M-4C-hUn" secondAttribute="bottom" constant="108" id="LIc-C8-HXS"/>
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="leading" secondItem="PCv-HT-pvE" secondAttribute="leading" id="Mbo-7B-GRC"/>
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="top" secondItem="d4D-EB-5VA" secondAttribute="topMargin" constant="-44" id="N1K-JB-SbJ"/>
                             <constraint firstItem="N6T-ZC-0zR" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="195" id="NcZ-u4-8Jk"/>
@@ -294,13 +262,11 @@
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="8K0-v0-ZDl" secondAttribute="centerX" id="UwX-ec-fFu"/>
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="trailing" secondItem="Fba-mM-XER" secondAttribute="trailing" id="WK9-aa-lje"/>
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="leading" secondItem="Fba-mM-XER" secondAttribute="leading" id="cTH-zW-VGC"/>
-                            <constraint firstItem="xVM-1k-8Iw" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="dQE-1m-bSS"/>
                             <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="ekG-zG-XZz"/>
                             <constraint firstItem="5As-zF-Xxw" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" constant="51" id="gc7-8w-COu"/>
                             <constraint firstItem="8K0-v0-ZDl" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" constant="85" id="hVQ-rC-nWg"/>
                             <constraint firstItem="PCv-HT-pvE" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="hW3-EI-2A9"/>
                             <constraint firstItem="Fba-mM-XER" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" id="jht-Q6-fLe"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="trailing" secondItem="xVM-1k-8Iw" secondAttribute="trailing" id="qj0-nS-sKb"/>
                             <constraint firstItem="8K0-v0-ZDl" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="u6R-jh-hD7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fhy-5t-D75"/>
@@ -365,125 +331,131 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1910.144927536232" y="845.75892857142856"/>
+            <point key="canvasLocation" x="2078" y="1288"/>
         </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="S48-Dv-hTa">
+        <!--Profile-->
+        <scene sceneID="PtP-tw-8Dq">
             <objects>
-                <viewController title="Profile View Controller" id="ocV-ea-e0k" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hcC-Ml-eAS">
+                <viewController id="Fh7-A1-Xyx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ua-jl-WmU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2S-N1-pFA">
-                                <rect key="frame" x="0.0" y="794" width="414" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvN-St-tVh">
+                                <rect key="frame" x="62" y="161" width="291" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem image="homeIcon" style="plain" id="6tP-AB-hyH" userLabel="homeButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vOn-KR-GGO">
-                                            <rect key="frame" x="20" y="4.5" width="140" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="homeIcon"/>
-                                        </button>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8sz-JR-cbx"/>
-                                    <barButtonItem style="plain" id="R2H-f8-DSB" userLabel="progressButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RTq-VH-ZrN">
-                                            <rect key="frame" x="160" y="5" width="116" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="progressIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2Dx-VS-eBB"/>
-                                    <barButtonItem style="plain" id="ldO-mx-7zK" userLabel="profileButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EGK-aw-2dB">
-                                            <rect key="frame" x="324" y="8" width="70" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="profileIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU4-Sn-4Vc">
-                                <rect key="frame" x="84" y="632" width="246" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Edit Profile">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="QTH-ts-z3D"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="L9f-WF-vgz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fDY-MB-KB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2820" y="875"/>
-        </scene>
-        <!--PTracker View Controller-->
-        <scene sceneID="WT2-f5-1CQ">
-            <objects>
-                <viewController title="PTracker View Controller" id="Cun-x5-xEH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7EI-wN-gTf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="progress tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buw-BM-h2l">
-                                <rect key="frame" x="186" y="253" width="126" height="21"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="streak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykF-3g-kre">
+                                <rect key="frame" x="62" y="294" width="137" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9Z-Vc-rBh">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="my frog's name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s2-QQ-XSM">
+                                <rect key="frame" x="62" y="435" width="291" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem image="homeIcon" style="plain" id="kVJ-7I-9gs" userLabel="homeButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bbi-Zl-fWG">
-                                            <rect key="frame" x="20" y="4.5" width="140" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="homeIcon"/>
-                                        </button>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WNn-oh-gCi"/>
-                                    <barButtonItem style="plain" id="IMZ-wm-Kwr" userLabel="progressButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9i3-LY-2a8">
-                                            <rect key="frame" x="160" y="5" width="116" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="progressIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AQu-WV-51L"/>
-                                    <barButtonItem style="plain" id="D19-gD-Vrc" userLabel="profileButton">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PHd-Ux-qF4">
-                                            <rect key="frame" x="324" y="8" width="70" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="profileIcon"/>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="selected categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3T-io-PDP">
+                                <rect key="frame" x="62" y="556" width="291" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# completed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-dZ-SBh">
+                                <rect key="frame" x="207" y="295" width="146" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKB-f7-Ga7" userLabel="editProfButton">
+                                <rect key="frame" x="62" y="701" width="291" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="edit profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdB-GU-Ogm" userLabel="profilePic">
+                                <rect key="frame" x="125" y="127" width="164" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Yyc-uC-HdN"/>
+                        <viewLayoutGuide key="safeArea" id="TrO-8C-i9k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wOY-i4-Rvb"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="d89-kh-z5x">
+                        <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-SD-Hjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIg-ZL-fTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3703" y="854"/>
+            <point key="canvasLocation" x="311.59420289855075" y="2021.6517857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Progress-->
+        <scene sceneID="tC8-yL-XFF">
+            <objects>
+                <viewController id="hqf-Fc-lWt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OjW-vE-bjn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="progress tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-7e-OzL">
+                                <rect key="frame" x="144" y="438" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wv9-iW-gzE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Progress" image="progressIcon" selectedImage="progressIcon" id="T8Y-nh-efN">
+                        <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFw-Rh-rWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-878.26086956521749" y="2021.6517857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1xn-8y-88p">
+            <objects>
+                <tabBarController id="ICD-fZ-iPX" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Txh-3b-BFr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zMm-Tv-fyF" kind="relationship" relationship="viewControllers" id="qo1-Mk-PIJ"/>
+                        <segue destination="hqf-Fc-lWt" kind="relationship" relationship="viewControllers" id="ecu-cM-lF0"/>
+                        <segue destination="Fh7-A1-Xyx" kind="relationship" relationship="viewControllers" id="IHU-M7-hPE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NW-XB-jk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="1288"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="4tX-pS-u7v">
             <objects>
                 <navigationController storyboardIdentifier="challenge" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zMm-Tv-fyF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="wBI-sj-Zf5">
+                        <color key="badgeColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LOG-mB-LZR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OZr-Ja-NUr">
@@ -497,7 +469,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GS-ep-1sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.0000000000001" y="845.75892857142856"/>
+            <point key="canvasLocation" x="948" y="1288"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="WlI-fd-4UJ">
@@ -721,7 +693,7 @@
         <image name="done button" width="110" height="41"/>
         <image name="eggs" width="188" height="188"/>
         <image name="homeIcon" width="37" height="35"/>
-        <image name="profileIcon" width="28" height="28"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="progressIcon" width="34" height="34"/>
         <image name="settingsIcon" width="32" height="32"/>
         <image name="streakBar4" width="375" height="29"/>
