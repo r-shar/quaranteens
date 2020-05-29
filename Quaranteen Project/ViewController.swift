@@ -234,12 +234,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //what to do when a challenge category is selected
     // we want to display different challenge deck (switch array)
     enum Categories: String {
-        case artsNCrafts = "Arts & Crafts"
-        case cooking = "Cooking"
-        case connections = "Connections"
-        case fitness = "Fitness"
-        case mentalHealth = "Mental Health"
-        case productivity = "Productivity"
+        case artsNCrafts = "arts & crafts"
+        case cooking = "cooking"
+        case connections = "connections"
+        case fitness = "fitness"
+        case mentalHealth = "mental health"
+        case productivity = "productivity"
     }
     @IBAction func cityTapped(_ sender: UIButton) {
         guard let categoryTitle = sender.currentTitle, let category = Categories(rawValue: categoryTitle) else {

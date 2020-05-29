@@ -18,6 +18,8 @@
 		2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */; };
 		632441B951F0B880D27C8124 /* Pods_Quaranteen_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EC15DBE1AF1BA80493795B /* Pods_Quaranteen_Project.framework */; };
 		79BF3D5BFA6A5A3271D58F50 /* Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690E9DAC297FE903D4F961E2 /* Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework */; };
+		A404685C2480973E009147D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A404685B2480973E009147D9 /* ProfileViewController.swift */; };
+		A404687524809D8B009147D9 /* PTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A404687424809D8B009147D9 /* PTrackerViewController.swift */; };
 		A414A859245117F600F79EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A858245117F600F79EA8 /* AppDelegate.swift */; };
 		A414A85B245117F600F79EA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A85A245117F600F79EA8 /* ViewController.swift */; };
 		A414A85E245117F600F79EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A414A85C245117F600F79EA8 /* Main.storyboard */; };
@@ -174,6 +176,8 @@
 		2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		690E9DAC297FE903D4F961E2 /* Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C430F3ECE7BFACE3D0DCFB /* Pods-Quaranteen Project-Quaranteen ProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quaranteen Project-Quaranteen ProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-Quaranteen Project-Quaranteen ProjectUITests/Pods-Quaranteen Project-Quaranteen ProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A404685B2480973E009147D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A404687424809D8B009147D9 /* PTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTrackerViewController.swift; sourceTree = "<group>"; };
 		A414A855245117F600F79EA8 /* Quaranteen Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quaranteen Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A414A858245117F600F79EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A414A85A245117F600F79EA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				A414A858245117F600F79EA8 /* AppDelegate.swift */,
 				A414A85A245117F600F79EA8 /* ViewController.swift */,
 				A414A85C245117F600F79EA8 /* Main.storyboard */,
+				A404685B2480973E009147D9 /* ProfileViewController.swift */,
+				A404687424809D8B009147D9 /* PTrackerViewController.swift */,
 				A414A85F245117F700F79EA8 /* Assets.xcassets */,
 				A414A861245117F700F79EA8 /* LaunchScreen.storyboard */,
 				A414A864245117F700F79EA8 /* Info.plist */,
@@ -771,8 +777,10 @@
 			files = (
 				2CBAD468247B245F0010E94D /* SelectChallengeViewController.swift in Sources */,
 				1AC5FB5C247E335A00306057 /* Profile.swift in Sources */,
+				A404687524809D8B009147D9 /* PTrackerViewController.swift in Sources */,
 				1AC5FB57247CB84E00306057 /* RoundButton.swift in Sources */,
 				2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */,
+				A404685C2480973E009147D9 /* ProfileViewController.swift in Sources */,
 				A414A85B245117F600F79EA8 /* ViewController.swift in Sources */,
 				A414A859245117F600F79EA8 /* AppDelegate.swift in Sources */,
 			);
