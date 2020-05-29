@@ -7,11 +7,16 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var editProfileButton: UIButton!
+    
+    @IBOutlet weak var profPic: UIImageView!
+    
+    @IBOutlet weak var name: UILabel!
+    
     
     @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
@@ -22,6 +27,32 @@ class ProfileViewController: UIViewController {
         editProfileButton.layer.cornerRadius = 20.0
         signOutButton.layer.cornerRadius = 20.0
         
+        var ref: DatabaseReference!
+
+        ref = Database.database().reference()
+        
+        let userID = Auth.auth().currentUser?.uid ?? ""
+        if (!userID.isEmpty) {
+            ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                     // Get user value
+                     let value = snapshot.value as? NSDictionary
+                     let name = value?["name"] as? String ?? ""
+                     let imgURL = value?["imgURL"] as? String ?? ""
+                     let email = value?["email"] as? String ?? ""
+                     
+                       
+                       self.name.text = name
+                       
+                       let url = URL(string: imgURL)
+                       
+                       self.downloadImage(from: url!)
+                       
+                       print(email)
+                     // ...
+                     }) { (error) in
+                       print(error.localizedDescription)
+                   }
+        }
         
     }
     
@@ -37,6 +68,23 @@ class ProfileViewController: UIViewController {
           print ("Error signing out: %@", signOutError)
         }
     }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.profPic.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
     /*
     // MARK: - Navigation
 

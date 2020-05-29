@@ -425,6 +425,8 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="editProfileButton" destination="uKB-f7-Ga7" id="ecF-5n-SYD"/>
+                        <outlet property="name" destination="AvN-St-tVh" id="MIc-cm-PVc"/>
+                        <outlet property="profPic" destination="OdB-GU-Ogm" id="ryo-Xb-3aL"/>
                         <outlet property="signOutButton" destination="Mxy-Ou-bVX" id="GkU-1J-hlb"/>
                     </connections>
                 </viewController>

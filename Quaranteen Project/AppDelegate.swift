@@ -86,10 +86,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print(error)
                 return
             }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "category")
+            vc.modalPresentationStyle = .fullScreen
+            self.window?.rootViewController = vc
+            
+            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            guard let userID = Auth.auth().currentUser?.uid else { return }
+            let givenName = user.profile.givenName
+            let email = user.profile.email
+            
+            let dimension = round(100 * UIScreen.main.scale)
+            let pic = user.profile.imageURL(withDimension: UInt(dimension))
+            
+            ref.child("users").child(userID).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
+            
             print("User is signed in with Firebase")
         }
         
     }
+    
     
     //This function handles operations when the user disconnects from the app
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
