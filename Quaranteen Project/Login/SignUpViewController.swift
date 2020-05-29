@@ -15,8 +15,6 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        
-        //Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         GIDSignIn.sharedInstance()?.delegate = self
         // Do any additional setup after loading the view.
@@ -36,14 +34,14 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
             var ref: DatabaseReference!
             ref = Database.database().reference()
             
-            let userId = user.userID                  // For client-side use only!
+            guard let userID = Auth.auth().currentUser?.uid else { return }
             let givenName = user.profile.givenName
             let email = user.profile.email
             
             let dimension = round(100 * UIScreen.main.scale)
             let pic = user.profile.imageURL(withDimension: UInt(dimension))
             
-            ref.child("users").child(userId!).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
+            ref.child("users").child(userID).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
             
             
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
@@ -28,6 +29,13 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedSignOut(_ sender: UIButton) {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+          print("User signed out")
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
     }
     /*
     // MARK: - Navigation
