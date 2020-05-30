@@ -425,6 +425,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="editProfileButton" destination="uKB-f7-Ga7" id="ecF-5n-SYD"/>
+                        <outlet property="frogName" destination="1s2-QQ-XSM" id="hgk-UA-isv"/>
                         <outlet property="name" destination="AvN-St-tVh" id="MIc-cm-PVc"/>
                         <outlet property="profPic" destination="OdB-GU-Ogm" id="ryo-Xb-3aL"/>
                         <outlet property="signOutButton" destination="Mxy-Ou-bVX" id="GkU-1J-hlb"/>
@@ -683,10 +684,10 @@
             </objects>
             <point key="canvasLocation" x="-301.44927536231887" y="143.97321428571428"/>
         </scene>
-        <!--Name Frog View Controller-->
+        <!--Frog-->
         <scene sceneID="kaV-36-8OJ">
             <objects>
-                <viewController id="lxq-n4-NNJ" customClass="NameFrogViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lxq-n4-NNJ" customClass="Frog" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHl-N1-Esb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -700,6 +701,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="done button"/>
                                 <connections>
+                                    <action selector="donePressed:" destination="lxq-n4-NNJ" eventType="touchUpInside" id="89R-la-39d"/>
                                     <segue destination="ICD-fZ-iPX" kind="presentation" modalPresentationStyle="fullScreen" id="SDC-AI-tJE"/>
                                 </connections>
                             </button>
@@ -743,6 +745,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vcr-Qq-0Jk"/>
                     </view>
+                    <connections>
+                        <outlet property="frogName" destination="Ie1-Qy-b85" id="r5W-hP-E1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXn-mQ-slN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

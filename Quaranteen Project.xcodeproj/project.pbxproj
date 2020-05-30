@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		1AC5FB55247CB42600306057 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5FB54247CB42600306057 /* Quicksand-VariableFont_wght.ttf */; };
 		1AC5FB57247CB84E00306057 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5FB56247CB84E00306057 /* RoundButton.swift */; };
-		1AC5FB5C247E335A00306057 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5FB5B247E335A00306057 /* Profile.swift */; };
 		1AC5FB772480A82F00306057 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5FB762480A82F00306057 /* GoogleService-Info.plist */; };
 		1AC5FB782480A82F00306057 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5FB762480A82F00306057 /* GoogleService-Info.plist */; };
 		1AC5FB792480A82F00306057 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5FB762480A82F00306057 /* GoogleService-Info.plist */; };
+		1AC5FB7C2481D80100306057 /* Frog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5FB7B2481D80100306057 /* Frog.swift */; };
+		1AC5FB7D2481D80100306057 /* Frog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5FB7B2481D80100306057 /* Frog.swift */; };
+		1AC5FB7E2481D80100306057 /* Frog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5FB7B2481D80100306057 /* Frog.swift */; };
 		1CF49C890E88B279810C54E2 /* Pods_Quaranteen_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D6475B65951EC71BA3D40 /* Pods_Quaranteen_ProjectTests.framework */; };
 		2C2634C52481C07F00C47A25 /* NameFrogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2634C42481C07F00C47A25 /* NameFrogViewController.swift */; };
 		2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2635282481CFF900C47A25 /* CustomTextField.swift */; };
@@ -171,8 +173,8 @@
 		1212BF273B64A673B95789E1 /* Pods-Quaranteen ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quaranteen ProjectTests.release.xcconfig"; path = "Target Support Files/Pods-Quaranteen ProjectTests/Pods-Quaranteen ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		1AC5FB54247CB42600306057 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		1AC5FB56247CB84E00306057 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		1AC5FB5B247E335A00306057 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		1AC5FB762480A82F00306057 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AC5FB7B2481D80100306057 /* Frog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frog.swift; sourceTree = "<group>"; };
 		24535305CE8DC6DAAE2FC77A /* Pods-Quaranteen Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quaranteen Project.debug.xcconfig"; path = "Target Support Files/Pods-Quaranteen Project/Pods-Quaranteen Project.debug.xcconfig"; sourceTree = "<group>"; };
 		2C2634C42481C07F00C47A25 /* NameFrogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameFrogViewController.swift; sourceTree = "<group>"; };
 		2C2635282481CFF900C47A25 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -248,22 +250,37 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1AC5FB59247E330D00306057 /* Login */ = {
+		1AC5FB59247E330D00306057 /* Getting Started */ = {
 			isa = PBXGroup;
 			children = (
 				2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */,
 				2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */,
-				2C2634C42481C07F00C47A25 /* NameFrogViewController.swift */,
+				1AC5FB7B2481D80100306057 /* Frog.swift */,
 			);
-			path = Login;
+			path = "Getting Started";
 			sourceTree = "<group>";
 		};
 		1AC5FB5A247E333D00306057 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				1AC5FB5B247E335A00306057 /* Profile.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		1AC5FB7A2481D7CF00306057 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				A404687424809D8B009147D9 /* PTrackerViewController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		2C51D31C24820E5000643FCB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				2C2634C42481C07F00C47A25 /* NameFrogViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		A414A84C245117F600F79EA8 = {
@@ -276,6 +293,7 @@
 				A414A856245117F600F79EA8 /* Products */,
 				FF14DD8D07D62BDF10FACFC3 /* Pods */,
 				FCB7DE01955F2B2DAD04816B /* Frameworks */,
+				2C51D31C24820E5000643FCB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,15 +310,15 @@
 		A414A857245117F600F79EA8 /* Quaranteen Project */ = {
 			isa = PBXGroup;
 			children = (
+				1AC5FB7A2481D7CF00306057 /* Progress */,
 				1AC5FB5A247E333D00306057 /* Profile */,
-				1AC5FB59247E330D00306057 /* Login */,
+				1AC5FB59247E330D00306057 /* Getting Started */,
 				1AC5FB58247E32FD00306057 /* Helpers */,
 				1AC5FB3C247CB3F000306057 /* fonts */,
 				A414A858245117F600F79EA8 /* AppDelegate.swift */,
+				A404685B2480973E009147D9 /* ProfileViewController.swift */,
 				A414A85A245117F600F79EA8 /* ViewController.swift */,
 				A414A85C245117F600F79EA8 /* Main.storyboard */,
-				A404685B2480973E009147D9 /* ProfileViewController.swift */,
-				A404687424809D8B009147D9 /* PTrackerViewController.swift */,
 				A414A85F245117F700F79EA8 /* Assets.xcassets */,
 				A414A861245117F700F79EA8 /* LaunchScreen.storyboard */,
 				A414A864245117F700F79EA8 /* Info.plist */,
@@ -782,10 +800,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBAD468247B245F0010E94D /* SelectChallengeViewController.swift in Sources */,
-				1AC5FB5C247E335A00306057 /* Profile.swift in Sources */,
 				A404687524809D8B009147D9 /* PTrackerViewController.swift in Sources */,
 				1AC5FB57247CB84E00306057 /* RoundButton.swift in Sources */,
 				2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */,
+				1AC5FB7C2481D80100306057 /* Frog.swift in Sources */,
 				2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */,
 				A404685C2480973E009147D9 /* ProfileViewController.swift in Sources */,
 				2C2634C52481C07F00C47A25 /* NameFrogViewController.swift in Sources */,
@@ -799,6 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A414A86E245117F800F79EA8 /* Quaranteen_ProjectTests.swift in Sources */,
+				1AC5FB7D2481D80100306057 /* Frog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +826,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A414A879245117F800F79EA8 /* Quaranteen_ProjectUITests.swift in Sources */,
+				1AC5FB7E2481D80100306057 /* Frog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
