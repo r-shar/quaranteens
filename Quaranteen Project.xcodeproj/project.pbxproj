@@ -171,6 +171,7 @@
 
 /* Begin PBXFileReference section */
 		1212BF273B64A673B95789E1 /* Pods-Quaranteen ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quaranteen ProjectTests.release.xcconfig"; path = "Target Support Files/Pods-Quaranteen ProjectTests/Pods-Quaranteen ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A7180952482443F0033FA50 /* NameFrogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameFrogViewController.swift; sourceTree = SOURCE_ROOT; };
 		1AC5FB54247CB42600306057 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		1AC5FB56247CB84E00306057 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		1AC5FB762480A82F00306057 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -323,6 +324,7 @@
 				A414A861245117F700F79EA8 /* LaunchScreen.storyboard */,
 				A414A864245117F700F79EA8 /* Info.plist */,
 				1AC5FB762480A82F00306057 /* GoogleService-Info.plist */,
+				1A7180952482443F0033FA50 /* NameFrogViewController.swift */,
 			);
 			path = "Quaranteen Project";
 			sourceTree = "<group>";

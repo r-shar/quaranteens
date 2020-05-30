@@ -28,6 +28,10 @@ class Frog: UIViewController {
             let childValues = ["frogName" : frogName.text!]
             
             ref.child("users").child(userID).updateChildValues(childValues)
+        } else {
+            let alert = UIAlertController(title: "Frog", message: "Please add a name for your frog", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

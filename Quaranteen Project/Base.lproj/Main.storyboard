@@ -719,7 +719,7 @@
                                     <fragment content="name your frog:">
                                         <attributes>
                                             <color key="NSColor" red="0.45101886990000001" green="0.76429468389999999" blue="0.4548497796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="30" name="Quicksand-Light_Bold"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
