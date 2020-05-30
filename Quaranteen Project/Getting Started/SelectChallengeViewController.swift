@@ -2,11 +2,12 @@
 //  SelectChallengeViewController.swift
 //  Quaranteen Project
 //
-//  Created by Can Dang on 2020-05-24.
+//  Created by Charlize Dang on 2020-05-24.
 //  Copyright © 2020 Rashmi Sharma. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 class SelectChallengeViewController: UIViewController {
 
@@ -68,8 +69,26 @@ class SelectChallengeViewController: UIViewController {
             goals.append("arts")
         }
         
-        //add array to user defaults:
-        defaults.set(goals, forKey: "goals")
+        //make sure they select at least 1:
+        if (goals.count == 0) {
+            //popup
+        }
+        
+        //make sure they don't select more than 3:
+        if (goals.count > 3) {
+            //popup
+        }
+        
+        //add challenges to firebase:
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        //get their user id to store data:
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        ref.child("users").child(userID).
+        
+        let childValues = ["challenges" : goals]
+        ref.child("users").child(userID).updateChildValues(childValues)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

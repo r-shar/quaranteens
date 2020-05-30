@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  Quaranteen Project
 //
-//  Created by Can Dang on 2020-05-02.
+//  Created by Charlize Dang on 2020-05-02.
 //  Copyright © 2020 Rashmi Sharma. All rights reserved.
 //
 
