@@ -10,48 +10,49 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var editProfileButton: UIButton!
     
     @IBOutlet weak var profPic: UIImageView!
     
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var frogName: UILabel!
     
     @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         editProfileButton.layer.cornerRadius = 20.0
         signOutButton.layer.cornerRadius = 20.0
         
         var ref: DatabaseReference!
-
+        
         ref = Database.database().reference()
         
         let userID = Auth.auth().currentUser?.uid ?? ""
         if (!userID.isEmpty) {
             ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
-                     // Get user value
-                     let value = snapshot.value as? NSDictionary
-                     let name = value?["name"] as? String ?? ""
-                     let imgURL = value?["imgURL"] as? String ?? ""
-                     let email = value?["email"] as? String ?? ""
-                     
-                       
-                       self.name.text = name
-                       
-                       let url = URL(string: imgURL)
-                       
-                       self.downloadImage(from: url!)
-                       
-                       print(email)
-                     // ...
-                     }) { (error) in
-                       print(error.localizedDescription)
-                   }
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let name = value?["name"] as? String ?? ""
+                let imgURL = value?["imgURL"] as? String ?? ""
+                let email = value?["email"] as? String ?? ""
+                let frogName = value?["frogName"] as? String ?? ""
+                
+                self.name.text = name
+                self.frogName.text = frogName
+                let url = URL(string: imgURL)
+                
+                self.downloadImage(from: url!)
+                
+                print(email)
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
         }
         
     }
@@ -62,10 +63,12 @@ class ProfileViewController: UIViewController {
     @IBAction func tappedSignOut(_ sender: UIButton) {
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
-          print("User signed out")
+            try firebaseAuth.signOut()
+            let userDefault = UserDefaults.standard
+            userDefault.set(false, forKey: "hasLoggedIn")
+            print("User signed out")
         } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+            print ("Error signing out: %@", signOutError)
         }
     }
     
@@ -86,13 +89,13 @@ class ProfileViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
