@@ -71,12 +71,16 @@ class SelectChallengeViewController: UIViewController {
         
         //make sure they select at least 1:
         if (goals.count == 0) {
-            //popup
+            let alert = UIAlertController(title: "Challenge", message: "Please select a challenge", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
         //make sure they don't select more than 3:
         if (goals.count > 3) {
-            //popup
+            let alert = UIAlertController(title: "Challenges", message: "Please don't select more than three challenges", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
         //add challenges to firebase:
@@ -85,7 +89,6 @@ class SelectChallengeViewController: UIViewController {
         
         //get their user id to store data:
         guard let userID = Auth.auth().currentUser?.uid else { return }
-        ref.child("users").child(userID).
         
         let childValues = ["challenges" : goals]
         ref.child("users").child(userID).updateChildValues(childValues)
