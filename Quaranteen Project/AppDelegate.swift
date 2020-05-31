@@ -34,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // for tab bar and tab bar button appearance
         UITabBar.appearance().tintColor = .darkGray
-        
-        UINavigationBar.appearance().barTintColor = .clear
-        
         return true
         
         

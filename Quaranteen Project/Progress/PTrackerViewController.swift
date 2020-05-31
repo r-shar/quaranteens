@@ -41,10 +41,6 @@ class PTrackerViewController: UIViewController {
         
         cCompletedStage.backgroundColor = UIColor(red: 0.38, green: 0.58, blue: 0.95, alpha: 1.00)
         
-        let titleLabel = UILabel()
-        navigationItem.titleView = titleLabel
-    
-        
         
     }
     

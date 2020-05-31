@@ -31,7 +31,6 @@
 		A414A863245117F700F79EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A414A861245117F700F79EA8 /* LaunchScreen.storyboard */; };
 		A414A86E245117F800F79EA8 /* Quaranteen_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A86D245117F800F79EA8 /* Quaranteen_ProjectTests.swift */; };
 		A414A879245117F800F79EA8 /* Quaranteen_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414A878245117F800F79EA8 /* Quaranteen_ProjectUITests.swift */; };
-		A4ACB6CE2483635C00F019C9 /* navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ACB6CD2483635C00F019C9 /* navBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,7 +198,6 @@
 		A414A874245117F800F79EA8 /* Quaranteen ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quaranteen ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A414A878245117F800F79EA8 /* Quaranteen_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quaranteen_ProjectUITests.swift; sourceTree = "<group>"; };
 		A414A87A245117F800F79EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4ACB6CD2483635C00F019C9 /* navBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navBar.swift; sourceTree = "<group>"; };
 		A4CE79FC24688C7400AA56F8 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		A91D6475B65951EC71BA3D40 /* Pods_Quaranteen_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quaranteen_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BAA3D415C12673201CEB6A /* Pods-Quaranteen Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quaranteen Project.release.xcconfig"; path = "Target Support Files/Pods-Quaranteen Project/Pods-Quaranteen Project.release.xcconfig"; sourceTree = "<group>"; };
@@ -327,7 +325,6 @@
 				A414A864245117F700F79EA8 /* Info.plist */,
 				1AC5FB762480A82F00306057 /* GoogleService-Info.plist */,
 				1A7180952482443F0033FA50 /* NameFrogViewController.swift */,
-				A4ACB6CD2483635C00F019C9 /* navBar.swift */,
 			);
 			path = "Quaranteen Project";
 			sourceTree = "<group>";
@@ -810,7 +807,6 @@
 				2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */,
 				1AC5FB7C2481D80100306057 /* Frog.swift in Sources */,
 				2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */,
-				A4ACB6CE2483635C00F019C9 /* navBar.swift in Sources */,
 				A404685C2480973E009147D9 /* ProfileViewController.swift in Sources */,
 				2C2634C52481C07F00C47A25 /* NameFrogViewController.swift in Sources */,
 				A414A85B245117F600F79EA8 /* ViewController.swift in Sources */,
