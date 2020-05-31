@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 
 target 'Quaranteen Project' do
+  
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -10,6 +11,9 @@ target 'Quaranteen Project' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  
+  # Pod for segmented nav bar
+  pod 'CarbonKit'
 
   target 'Quaranteen ProjectTests' do
     inherit! :search_paths
