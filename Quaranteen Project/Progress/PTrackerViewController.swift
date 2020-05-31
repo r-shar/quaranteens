@@ -43,12 +43,12 @@ class PTrackerViewController: UIViewController {
         
         let titleLabel = UILabel()
         navigationItem.titleView = titleLabel
-        
-        
+    
         
         
     }
     
+
 
     /*
     // MARK: - Navigation
