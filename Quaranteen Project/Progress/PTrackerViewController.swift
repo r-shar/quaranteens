@@ -8,13 +8,9 @@
 
 import UIKit
 import Firebase
-import CarbonKit
 
 class PTrackerViewController: UIViewController {
    
-    // add the ctnavigation delegate when implementing the new tab bar
- //   ,CarbonTabSwipeNavigationDelegate
-
     
 
     @IBOutlet weak var devStage: UILabel!
@@ -47,10 +43,6 @@ class PTrackerViewController: UIViewController {
         
         cCompletedStage.backgroundColor = UIColor(red: 0.38, green: 0.58, blue: 0.95, alpha: 1.00)
         
-        // for segmented nav bar
-//        let items = ["fitness", "cooking", "arts & crafts"]
-//        let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items, delegate: self)
-//        carbonTabSwipeNavigation.insert(intoRootViewController: self)
     }
     
 

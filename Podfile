@@ -13,7 +13,7 @@ target 'Quaranteen Project' do
   pod 'Firebase/Analytics'
   
   # Pod for segmented nav bar
-  pod 'CarbonKit'
+ 
 
   target 'Quaranteen ProjectTests' do
     inherit! :search_paths
