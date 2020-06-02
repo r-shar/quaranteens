@@ -28,6 +28,11 @@ class ProfileViewController: UIViewController {
         editProfileButton.layer.cornerRadius = 20.0
         signOutButton.layer.cornerRadius = 20.0
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
