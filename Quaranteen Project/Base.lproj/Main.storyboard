@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -413,7 +413,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="my name is">
                                                 <attributes>
-                                                    <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
+                                                    <font key="NSFont" metaFont="menu" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -427,7 +427,7 @@
                                             <fragment content="&quot;name&quot;">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="24" name="Quicksand-Light_Medium"/>
+                                                    <font key="NSFont" metaFont="system" size="24"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -457,7 +457,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="my birthday is">
                                                 <attributes>
-                                                    <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
+                                                    <font key="NSFont" metaFont="menu" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -471,7 +471,7 @@
                                             <fragment content="&quot;birthday&quot;">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="24" name="Quicksand-Light_Medium"/>
+                                                    <font key="NSFont" metaFont="system" size="24"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -619,15 +619,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-7e-OzL">
-                                <rect key="frame" x="83" y="55" width="248" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okI-WD-E32" userLabel="profPic">
-                                <rect key="frame" x="127" y="134" width="160" height="160"/>
+                                <rect key="frame" x="127" y="150" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qf9-h3-Hxm" userLabel="devCard">
@@ -766,6 +759,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-7e-OzL">
+                                <rect key="frame" x="83" y="71" width="248" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Wv9-iW-gzE"/>
@@ -777,6 +777,7 @@
                         <outlet property="cCompletedStage" destination="een-cn-sVm" id="aD9-vv-pXt"/>
                         <outlet property="cRemainingStage" destination="Grb-qW-cqK" id="yiD-zk-eoA"/>
                         <outlet property="devStage" destination="2l0-y0-ryS" id="pY5-aD-omP"/>
+                        <outlet property="name" destination="vAr-7e-OzL" id="Zra-b8-YA4"/>
                         <outlet property="profPic" destination="okI-WD-E32" id="nBJ-Iq-V7T"/>
                         <outlet property="streakStage" destination="u8g-LZ-Xgp" id="XlD-1p-Bm0"/>
                     </connections>
