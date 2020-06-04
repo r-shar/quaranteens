@@ -345,7 +345,7 @@
             <objects>
                 <viewController id="BGh-Vc-M4e" customClass="EditProfileViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abh-SU-BNy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-L4-9yP">
@@ -591,7 +591,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedEditProfile:" destination="Fh7-A1-Xyx" eventType="touchUpInside" id="k8m-04-G6Z"/>
-                                    <segue destination="BGh-Vc-M4e" kind="presentation" id="vW9-jb-GLG"/>
+                                    <segue destination="BGh-Vc-M4e" kind="presentation" modalPresentationStyle="fullScreen" id="vW9-jb-GLG"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
+        Database.database().isPersistenceEnabled = true
         let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
         
         if (loggedIn) {
