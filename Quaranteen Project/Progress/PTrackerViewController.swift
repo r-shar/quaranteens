@@ -30,7 +30,7 @@ class PTrackerViewController: UIViewController {
         cRemainingStage.layer.cornerRadius = 20.0
         cCompletedStage.layer.cornerRadius = 20.0
         
-        profPic.layer.cornerRadius = 80.0
+        profPic.layer.cornerRadius = 65.0
         profPic.clipsToBounds = true
         devStage.clipsToBounds = true
         streakStage.clipsToBounds = true
