@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 class EditProfileViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var birthday: UILabel!
+    @IBOutlet weak var frogName: UILabel!
+    
+    
+    
+    //set name:
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        //save the information
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
