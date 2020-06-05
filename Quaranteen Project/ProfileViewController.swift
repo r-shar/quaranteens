@@ -14,24 +14,25 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editProfileButton: UIButton!
     
     @IBOutlet weak var profPic: UIImageView!
-    
+        
     @IBOutlet weak var name: UILabel!
-    
-    @IBOutlet weak var frogName: UILabel!
-    
+        
     @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        editProfileButton.layer.cornerRadius = 20.0
-        signOutButton.layer.cornerRadius = 20.0
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        profPic.layer.masksToBounds = true
+        profPic.layer.borderWidth = 6
+        profPic.layer.borderColor = UIColor.white.cgColor
+        profPic.layer.cornerRadius = profPic.frame.height/2
+        name.layer.masksToBounds = true
+        name.layer.cornerRadius = name.frame.height/2
         
         var ref: DatabaseReference!
         
@@ -45,10 +46,7 @@ class ProfileViewController: UIViewController {
                 let name = value?["name"] as? String ?? ""
                 let imgURL = value?["imgURL"] as? String ?? ""
                 let email = value?["email"] as? String ?? ""
-                let frogName = value?["frogName"] as? String ?? ""
-                
                 self.name.text = name
-                self.frogName.text = frogName
                 let url = URL(string: imgURL)
                 
                 self.downloadImage(from: url!)
