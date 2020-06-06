@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -419,7 +419,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="my name is">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                    <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -433,7 +433,7 @@
                                             <fragment content="&quot;name&quot;">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="24"/>
+                                                    <font key="NSFont" size="24" name="Quicksand-Light_Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -461,9 +461,10 @@
                                         <rect key="frame" x="15" y="14" width="145" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="my birthday is">
+                                            <fragment content="my email is">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -474,10 +475,10 @@
                                         <rect key="frame" x="15" y="39" width="244" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="&quot;birthday&quot;">
+                                            <fragment content="&quot;email&quot;">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="24"/>
+                                                    <font key="NSFont" size="18" name="Quicksand-Light_Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -533,7 +534,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="my frog's name is ">
                                         <attributes>
-                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -547,7 +548,7 @@
                                     <fragment content="&quot;frog name&quot;">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <font key="NSFont" size="24" name="Quicksand-Light_Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -568,7 +569,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="how I want to grow">
                                         <attributes>
-                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <font key="NSFont" size="14" name="Quicksand-Light_Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -581,9 +582,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="edit profile" id="mQe-qW-WIt"/>
                     <connections>
-                        <outlet property="birthday" destination="9xk-qB-Z3m" id="ppx-hW-eB3"/>
+                        <outlet property="email" destination="9xk-qB-Z3m" id="LiZ-c7-CWa"/>
                         <outlet property="frogName" destination="E3P-JI-UZw" id="89l-m2-1Vw"/>
-                        <outlet property="name" destination="NlM-JY-eQj" id="W6m-pc-bk9"/>
+                        <outlet property="name" destination="NlM-JY-eQj" id="2jl-Ia-vgp"/>
+                        <outlet property="profPic" destination="fiI-rl-s9W" id="mP0-za-Q89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8r-Ef-kfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -828,24 +830,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="b55-Y4-dyX">
-                                <rect key="frame" x="20.5" y="300" width="373" height="34"/>
+                                <rect key="frame" x="31.5" y="302" width="351" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5u-10-bcc">
-                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="fitness">
                                             <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOx-Po-TT9">
-                                        <rect key="frame" x="129" y="0.0" width="65" height="34"/>
+                                        <rect key="frame" x="124" y="0.0" width="61" height="32"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="cooking">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA0-Eu-ubn">
-                                        <rect key="frame" x="268" y="0.0" width="105" height="34"/>
+                                        <rect key="frame" x="259" y="0.0" width="92" height="32"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="arts &amp; crafts">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
