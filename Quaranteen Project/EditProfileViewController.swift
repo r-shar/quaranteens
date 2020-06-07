@@ -18,7 +18,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var growth1: UIButton!
     @IBOutlet weak var growth2: UIButton!
-    
+    var imageURL: String
     let datePicker = UIDatePicker()
     
     @IBOutlet weak var birthday: UITextView!
@@ -35,7 +35,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
         guard let userID = Auth.auth().currentUser?.uid else { return }
 
-        ref.child("users").child(userID).updateChildValues(["name": name.text!, "imgURL": "img", "frogName" : frogName.text!])
+        ref.child("users").child(userID).updateChildValues(["name": name.text!, "imgURL": imageURL, "frogName" : frogName.text!])
         dismiss(animated: true, completion: nil)
     }
     
@@ -99,7 +99,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let vc = UIImagePickerController()
         vc.delegate = self
         vc.sourceType = .savedPhotosAlbum
-        vc.allowsEditing = false
+        vc.allowsEditing = true
         
         present(vc, animated: true, completion: nil)
         
@@ -112,6 +112,9 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             print("No image found")
             return
         }
+        //self.imageURL = info[.imageURL]
+        
+    
 
         // set image as profilepic
         self.profPic.image = image

@@ -10,12 +10,18 @@ import Foundation
 import UIKit
 import Firebase
 
-class Frog: UIViewController {
+class Frog: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var frogName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        frogName.delegate = self
         
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+       {
+           textField.resignFirstResponder()
+           return true
+       }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
