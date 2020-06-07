@@ -32,9 +32,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Add challenge selfie to this challenge card</string>
+	<string>Allow Grow to access your camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Add challenge selfie to this challenge card</string>
+	<string>Allow Grow to access your photo library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Quicksand-VariableFont_wght.ttf</string>

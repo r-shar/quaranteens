@@ -384,10 +384,6 @@
                                     <action selector="done:" destination="BGh-Vc-M4e" eventType="touchUpInside" id="M9y-k2-tny"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiI-rl-s9W" userLabel="profilePic">
-                                <rect key="frame" x="125" y="192" width="164" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHL-0f-efZ" customClass="RoundButton" customModule="Quaranteen_Project" customModuleProvider="target">
                                 <rect key="frame" x="150" y="307" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -408,6 +404,9 @@
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editImageClicked:" destination="BGh-Vc-M4e" eventType="touchUpInside" id="MGB-Mj-mNm"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-Oh-IOh" customClass="BorderView" customModule="Quaranteen_Project" customModuleProvider="target">
                                 <rect key="frame" x="74" y="362" width="267" height="79"/>
@@ -576,6 +575,27 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLv-pD-IUn" userLabel="profilePic" customClass="BorderImageView" customModule="Quaranteen_Project" customModuleProvider="target">
+                                <rect key="frame" x="134" y="153" width="146" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.91649991269999997" green="0.4701945186" blue="0.1331084669" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="7" height="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G5P-AO-Hxe"/>
@@ -585,7 +605,7 @@
                         <outlet property="email" destination="9xk-qB-Z3m" id="LiZ-c7-CWa"/>
                         <outlet property="frogName" destination="E3P-JI-UZw" id="89l-m2-1Vw"/>
                         <outlet property="name" destination="NlM-JY-eQj" id="2jl-Ia-vgp"/>
-                        <outlet property="profPic" destination="fiI-rl-s9W" id="mP0-za-Q89"/>
+                        <outlet property="profPic" destination="oLv-pD-IUn" id="Js2-6j-afy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8r-Ef-kfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 
     @IBOutlet weak var name: UILabel!
@@ -24,6 +24,7 @@ class EditProfileViewController: UIViewController {
     
     @IBAction func done(_ sender: Any) {
         //save the information
+        //save to database
         dismiss(animated: true, completion: nil)
     }
     
@@ -36,8 +37,6 @@ class EditProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         profPic.layer.masksToBounds = true
-        profPic.layer.borderWidth = 6
-        profPic.layer.borderColor = UIColor.white.cgColor
         profPic.layer.cornerRadius = profPic.frame.height/2
         
         var ref: DatabaseReference!
@@ -79,6 +78,30 @@ class EditProfileViewController: UIViewController {
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
          URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
      }
+    
+    @IBAction func editImageClicked(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.sourceType = .savedPhotosAlbum
+        vc.allowsEditing = false
+        
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+
+        // set image as profilepic
+        self.profPic.image = image
+        
+    }
+    
     
 
     /*

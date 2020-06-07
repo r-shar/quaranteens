@@ -20,6 +20,7 @@
 		2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2635282481CFF900C47A25 /* CustomTextField.swift */; };
 		2C51D3372484A89900643FCB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D3362484A89900643FCB /* EditProfileViewController.swift */; };
 		2C51D3532484D5D900643FCB /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D3522484D5D900643FCB /* BorderView.swift */; };
+		2C51D359248C637F00643FCB /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D358248C637F00643FCB /* BorderImageView.swift */; };
 		2CBAD468247B245F0010E94D /* SelectChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */; };
 		2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */; };
 		632441B951F0B880D27C8124 /* Pods_Quaranteen_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EC15DBE1AF1BA80493795B /* Pods_Quaranteen_Project.framework */; };
@@ -113,13 +114,6 @@
 			remoteGlobalIDString = 3347A1AB6546F0A3977529B8F199DC41;
 			remoteInfo = PromisesObjC;
 		};
-		2C51D3502484A89A00643FCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A4CE79FC24688C7400AA56F8 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 857D0B90490FD8083F79B97597566B28;
-			remoteInfo = CarbonKit;
-		};
 		A414A86A245117F800F79EA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A414A84D245117F600F79EA8 /* Project object */;
@@ -190,6 +184,7 @@
 		2C2635282481CFF900C47A25 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2C51D3362484A89900643FCB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		2C51D3522484D5D900643FCB /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		2C51D358248C637F00643FCB /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChallengeViewController.swift; sourceTree = "<group>"; };
 		2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		690E9DAC297FE903D4F961E2 /* Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +254,7 @@
 				1AC5FB56247CB84E00306057 /* RoundButton.swift */,
 				2C2635282481CFF900C47A25 /* CustomTextField.swift */,
 				2C51D3522484D5D900643FCB /* BorderView.swift */,
+				2C51D358248C637F00643FCB /* BorderImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -364,7 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				A4CE7A0724688C7400AA56F8 /* AppAuth.framework */,
-				2C51D3512484A89A00643FCB /* CarbonKit.framework */,
 				1AC5FB26247B7B5E00306057 /* FirebaseAuth.framework */,
 				1AC5FB28247B7B5E00306057 /* FirebaseCore.framework */,
 				1AC5FB2A247B7B5E00306057 /* FirebaseCoreDiagnostics.framework */,
@@ -598,13 +593,6 @@
 			remoteRef = 1AC5FB39247B7B5E00306057 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2C51D3512484A89A00643FCB /* CarbonKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CarbonKit.framework;
-			remoteRef = 2C51D3502484A89A00643FCB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		A4CE7A0724688C7400AA56F8 /* AppAuth.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -829,6 +817,7 @@
 				2C51D3532484D5D900643FCB /* BorderView.swift in Sources */,
 				2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */,
 				1AC5FB7C2481D80100306057 /* Frog.swift in Sources */,
+				2C51D359248C637F00643FCB /* BorderImageView.swift in Sources */,
 				2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */,
 				A404685C2480973E009147D9 /* ProfileViewController.swift in Sources */,
 				2C2634C52481C07F00C47A25 /* NameFrogViewController.swift in Sources */,
