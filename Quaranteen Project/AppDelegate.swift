@@ -151,6 +151,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 let value = snapshot.value as? NSDictionary
                 let frogName = value?["frogName"] as? String ?? ""
                 let challenges = value?["challenges"] as? [String] ?? []
+                let name = value?["name"] as? String ?? ""
+                let userEmail = value?["email"] as? String ?? ""
+                let imgURL = value?["imgURL"] as? String ?? ""
+                
+                if (name.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["name": givenName!])
+                }
+                
+                if (userEmail.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["email": email!])
+                }
+                
+                if (imgURL.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["imgURL": pic?.absoluteString])
+                }
                 
                 if (challenges.isEmpty) {
                     let vc = storyboard.instantiateViewController(withIdentifier: "category")
@@ -168,8 +183,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }) { (error) in
                 print(error.localizedDescription)
             }
-            
-            ref.child("users").child(userID).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
             
             print("User is signed in with Firebase")
         }
