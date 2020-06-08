@@ -116,6 +116,31 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         }
         //self.imageURL = info[.imageURL]
         
+        let imageName = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).png")
+        
+        if let uploadData = image.pngData() {
+            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                
+                guard let metadata = metadata else {
+                    return
+                }
+                
+                let size = metadata.size
+                storageRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                    
+                    self.imageURL = downloadURL.absoluteString
+                    
+                }
+                
+                
+            }
+        }
+        
+        
         
         
         // set image as profilepic
