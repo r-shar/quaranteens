@@ -24,12 +24,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         Database.database().isPersistenceEnabled = true
-        let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
+//        let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
+//
+//        if (loggedIn) {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+//            self.window?.rootViewController = vc
+//        }
         
-        if (loggedIn) {
+        if (Auth.auth().currentUser != nil) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
-            self.window?.rootViewController = vc
+            
+            let currentUser = Auth.auth().currentUser?.uid ?? ""
+                        
+            if (!currentUser.isEmpty) {
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                
+                ref.child("users").child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    let value = snapshot.value as? NSDictionary
+                    let frogName = value?["frogName"] as? String ?? ""
+                    let challenges = value?["challenges"] as? [String] ?? []
+                    
+                    if (challenges.isEmpty) {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "category")
+                        self.window?.rootViewController = vc
+                    } else if (frogName.isEmpty) {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "frog")
+                        self.window?.rootViewController = vc
+                    } else {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+                        self.window?.rootViewController = vc
+                    }
+                    
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+            
+            } else {
+                self.window?.rootViewController = vc
+            }
+            
         }
         
         // for tab bar and tab bar button appearance
@@ -94,7 +131,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             vc.modalPresentationStyle = .fullScreen
             self.window?.rootViewController = vc
             
-            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
+//            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
             
             var ref: DatabaseReference!
             ref = Database.database().reference()

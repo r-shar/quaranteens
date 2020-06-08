@@ -49,7 +49,9 @@ class ProfileViewController: UIViewController {
                 self.name.text = name
                 let url = URL(string: imgURL)
                 
-                self.downloadImage(from: url!)
+                if (!imgURL.isEmpty) {
+                    self.downloadImage(from: url!)
+                }
                 
                 print(email)
                 // ...
@@ -67,8 +69,8 @@ class ProfileViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            let userDefault = UserDefaults.standard
-            userDefault.set(false, forKey: "hasLoggedIn")
+//            let userDefault = UserDefaults.standard
+//            userDefault.set(false, forKey: "hasLoggedIn")
             print("User signed out")
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
