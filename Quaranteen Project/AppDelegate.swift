@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         if (Auth.auth().currentUser != nil) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+            let vc = storyboard.instantiateViewController(withIdentifier: "signUp")
             
             let currentUser = Auth.auth().currentUser?.uid ?? ""
                         
@@ -50,9 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     
                     if (challenges.isEmpty) {
                         let vc = storyboard.instantiateViewController(withIdentifier: "category")
+                        vc.modalPresentationStyle = .fullScreen
                         self.window?.rootViewController = vc
                     } else if (frogName.isEmpty) {
                         let vc = storyboard.instantiateViewController(withIdentifier: "frog")
+                        vc.modalPresentationStyle = .fullScreen
                         self.window?.rootViewController = vc
                     } else {
                         let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
@@ -64,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 }
             
             } else {
+                vc.modalPresentationStyle = .fullScreen
                 self.window?.rootViewController = vc
             }
             
@@ -142,6 +145,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             let dimension = round(100 * UIScreen.main.scale)
             let pic = user.profile.imageURL(withDimension: UInt(dimension))
+            
+            ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let frogName = value?["frogName"] as? String ?? ""
+                let challenges = value?["challenges"] as? [String] ?? []
+                
+                if (challenges.isEmpty) {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "category")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.window?.rootViewController = vc
+                } else if (frogName.isEmpty) {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "frog")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.window?.rootViewController = vc
+                } else {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+                    self.window?.rootViewController = vc
+                }
+                
+            }) { (error) in
+                print(error.localizedDescription)
+            }
             
             ref.child("users").child(userID).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
             
