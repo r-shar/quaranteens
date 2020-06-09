@@ -62,7 +62,10 @@ class PTrackerViewController: UIViewController {
                 
                 let url = URL(string: imgURL)
                 
-                self.downloadImage(from: url!)
+                if (!imgURL.isEmpty){
+                    self.downloadImage(from: url!)
+                }
+                
                 self.name.text = name
             }
         }
