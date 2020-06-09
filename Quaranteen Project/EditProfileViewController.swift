@@ -13,8 +13,9 @@ import FirebaseStorage
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var frogName: UILabel!
+    
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var frogName: UITextField!
     @IBOutlet weak var profPic: UIImageView!
     
     @IBOutlet weak var growth1: UIButton!
@@ -36,7 +37,12 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
         guard let userID = Auth.auth().currentUser?.uid else { return }
         
-        ref.child("users").child(userID).updateChildValues(["name": name.text!, "imgURL": imageURL, "frogName" : frogName.text!])
+        if (imageURL.isEmpty) {
+            ref.child("users").child(userID).updateChildValues(["name": name.text!, "frogName" : frogName.text!])
+        } else {
+            ref.child("users").child(userID).updateChildValues(["name": name.text!, "imgURL": imageURL, "frogName" : frogName.text!])
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -44,11 +50,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         createDatePicker()
         
-        growth1.layer.cornerRadius = 7
         growth1.layer.masksToBounds = true
-        
-        growth2.layer.cornerRadius = 7
+        growth1.layer.cornerRadius = 20
         growth2.layer.masksToBounds = true
+        growth2.layer.cornerRadius = 20
         
         // Do any additional setup after loading the view.
     }
