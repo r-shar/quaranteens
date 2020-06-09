@@ -177,6 +177,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     self.window?.rootViewController = vc
                 } else {
                     let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+                    vc?.modalPresentationStyle = .fullScreen
                     self.window?.rootViewController = vc
                 }
                 
