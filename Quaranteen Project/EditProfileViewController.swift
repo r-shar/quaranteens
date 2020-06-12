@@ -113,7 +113,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             return
         }
         //self.imageURL = info[.imageURL]
-        
+        //finish edit image then add done button to keyboard when first naming frog 
     
 
         // set image as profilepic
