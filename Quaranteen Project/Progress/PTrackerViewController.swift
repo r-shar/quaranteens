@@ -21,6 +21,14 @@ class PTrackerViewController: UIViewController {
     @IBOutlet weak var profPic: UIImageView!
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var c1: UIButton!
+    @IBOutlet weak var c2: UIButton!
+    @IBOutlet weak var c3: UIButton!
+    
+    @IBOutlet weak var nameStage: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +54,48 @@ class PTrackerViewController: UIViewController {
         cCompletedStage.backgroundColor = UIColor(red: 0.38, green: 0.58, blue: 0.95, alpha: 1.00)
         
         
+        // draw track for progress to be laid on
+        let trackLayer = CAShapeLayer()
+        
+        let circularPath = UIBezierPath(arcCenter: .init(x: 310, y: 700), radius: 55, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        trackLayer.path = circularPath.cgPath
+        
+        
+        trackLayer.strokeColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00).cgColor
+        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.lineWidth = 5
+        trackLayer.lineCap = CAShapeLayerLineCap.round
+        
+        view.layer.addSublayer(trackLayer)
+        // draw progress circle
+        let shapeLayer = CAShapeLayer()
+        
+        shapeLayer.path = circularPath.cgPath
+        
+        // uncomment below once animation fixed
+       // shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 5
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
+        
+        
+        
+        // figure out why animation isn't visible
+        let progressAnimation = CABasicAnimation(keyPath: "strokEnd")
+        
+        progressAnimation.toValue = 1
+        progressAnimation.duration = 2
+        progressAnimation.fillMode = CAMediaTimingFillMode.forwards
+        progressAnimation.isRemovedOnCompletion = false
+        
+        shapeLayer.add(progressAnimation, forKey: "loadProgress")
+        
+        
+        view.layer.addSublayer(shapeLayer)
+        
+        
+        
         ref = Database.database().reference()
         
         let userID = Auth.auth().currentUser?.uid ?? ""
@@ -58,12 +108,28 @@ class PTrackerViewController: UIViewController {
                 
                 let name = value?["name"] as? String ?? ""
                 
+                let frogName = value?["frogName"] as? String ?? ""
+                
                 let imgURL = value?["imgURL"] as? String ?? ""
                 
                 let url = URL(string: imgURL)
                 
-                self.downloadImage(from: url!)
+                let challenges = value?["challenges"] as? [String] ?? []
+                
+                if (!imgURL.isEmpty){
+                    self.downloadImage(from: url!)
+                }
+                
+                // need to test if names were correctly changed in database
+                // can't edit my challenges rn
+                
                 self.name.text = name
+                self.c1.setTitle(challenges[0], for: .normal)
+                self.c2.setTitle(challenges[1], for: .normal)
+                self.c3.setTitle(challenges[2], for: .normal)
+                
+                self.nameStage.text = frogName + "\'s Stage"
+                
             }
         }
     }
@@ -83,6 +149,7 @@ class PTrackerViewController: UIViewController {
      func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
          URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
      }
+    
     
 
 

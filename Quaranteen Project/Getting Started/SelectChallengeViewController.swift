@@ -54,7 +54,7 @@ class SelectChallengeViewController: UIViewController {
             goals.append("fitness")
         }
         if (mentalHealthButton.isSelected) {
-            goals.append("mentalhealth")
+            goals.append("mental health")
         }
         if (connectionsButton.isSelected) {
             goals.append("connections")
@@ -66,7 +66,7 @@ class SelectChallengeViewController: UIViewController {
             goals.append("productivity")
         }
         if (artsButton.isSelected) {
-            goals.append("arts")
+            goals.append("arts & crafts")
         }
         
         //make sure they select at least 1:

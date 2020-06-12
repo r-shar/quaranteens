@@ -18,18 +18,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
         // Override point for customization after application launch.
         // Initialize sign-in
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         Database.database().isPersistenceEnabled = true
-        let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
+//        let loggedIn = UserDefaults.standard.bool(forKey: "hasLoggedIn")
+//
+//        if (loggedIn) {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+//            self.window?.rootViewController = vc
+//        }
         
-        if (loggedIn) {
+        if (Auth.auth().currentUser != nil) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
-            self.window?.rootViewController = vc
+            let vc = storyboard.instantiateViewController(withIdentifier: "signUp")
+            
+            let currentUser = Auth.auth().currentUser?.uid ?? ""
+                        
+            if (!currentUser.isEmpty) {
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                
+                ref.child("users").child(currentUser).observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    let value = snapshot.value as? NSDictionary
+                    let frogName = value?["frogName"] as? String ?? ""
+                    let challenges = value?["challenges"] as? [String] ?? []
+                    
+                    if (challenges.isEmpty) {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "category")
+                        vc.modalPresentationStyle = .fullScreen
+                        self.window?.rootViewController = vc
+                    } else if (frogName.isEmpty) {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "frog")
+                        vc.modalPresentationStyle = .fullScreen
+                        self.window?.rootViewController = vc
+                    } else {
+                        let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+                        self.window?.rootViewController = vc
+                    }
+                    
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+            
+            } else {
+                vc.modalPresentationStyle = .fullScreen
+                self.window?.rootViewController = vc
+            }
+            
         }
         
         // for tab bar and tab bar button appearance
@@ -94,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             vc.modalPresentationStyle = .fullScreen
             self.window?.rootViewController = vc
             
-            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
+//            UserDefaults.standard.set(true, forKey: "hasLoggedIn")
             
             var ref: DatabaseReference!
             ref = Database.database().reference()
@@ -106,7 +148,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let dimension = round(100 * UIScreen.main.scale)
             let pic = user.profile.imageURL(withDimension: UInt(dimension))
             
-            ref.child("users").child(userID).updateChildValues(["name": givenName!, "email": email!, "imgURL": pic?.absoluteString])
+            ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let frogName = value?["frogName"] as? String ?? ""
+                let challenges = value?["challenges"] as? [String] ?? []
+                let name = value?["name"] as? String ?? ""
+                let userEmail = value?["email"] as? String ?? ""
+                let imgURL = value?["imgURL"] as? String ?? ""
+                
+                if (name.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["name": givenName!])
+                }
+                
+                if (userEmail.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["email": email!])
+                }
+                
+                if (imgURL.isEmpty) {
+                    ref.child("users").child(userID).updateChildValues(["imgURL": pic?.absoluteString])
+                }
+                
+                if (challenges.isEmpty) {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "category")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.window?.rootViewController = vc
+                } else if (frogName.isEmpty) {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "frog")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.window?.rootViewController = vc
+                } else {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "challengeTab") as? UITabBarController
+                    vc?.modalPresentationStyle = .fullScreen
+                    self.window?.rootViewController = vc
+                }
+                
+            }) { (error) in
+                print(error.localizedDescription)
+            }
             
             print("User is signed in with Firebase")
         }
@@ -120,6 +199,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Perform any operations when the user disconnects from app here.
         // ...
     }
+    
+    
     
     
     
