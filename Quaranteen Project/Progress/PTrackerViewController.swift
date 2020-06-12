@@ -74,7 +74,7 @@ class PTrackerViewController: UIViewController {
         shapeLayer.path = circularPath.cgPath
         
         // uncomment below once animation fixed
-       // shapeLayer.strokeColor = UIColor.white.cgColor
+        //shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 5
         shapeLayer.lineCap = CAShapeLayerLineCap.round
@@ -82,7 +82,7 @@ class PTrackerViewController: UIViewController {
         
         
         // figure out why animation isn't visible
-        let progressAnimation = CABasicAnimation(keyPath: "strokEnd")
+        let progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
         progressAnimation.toValue = 1
         progressAnimation.duration = 2
