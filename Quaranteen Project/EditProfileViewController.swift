@@ -121,6 +121,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             return
         }
         //self.imageURL = info[.imageURL]
+
+        //finish edit image then add done button to keyboard when first naming frog 
         
         let imageName = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).png")
@@ -145,12 +147,6 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
                 
             }
         }
-        
-        
-        
-        
-        // set image as profilepic
-        self.profPic.image = image
         
     }
     
