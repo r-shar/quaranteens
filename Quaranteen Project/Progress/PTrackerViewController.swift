@@ -74,14 +74,17 @@ class PTrackerViewController: UIViewController {
         shapeLayer.path = circularPath.cgPath
         
         // uncomment below once animation fixed
-        //shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 5
+        
+        shapeLayer.strokeEnd = 0
+        
         shapeLayer.lineCap = CAShapeLayerLineCap.round
         
+        view.layer.addSublayer(shapeLayer)
         
-        
-        // figure out why animation isn't visible
+      
         let progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
         progressAnimation.toValue = 1
@@ -90,11 +93,9 @@ class PTrackerViewController: UIViewController {
         progressAnimation.isRemovedOnCompletion = false
         
         shapeLayer.add(progressAnimation, forKey: "loadProgress")
+    
         
-        
-        view.layer.addSublayer(shapeLayer)
-        
-        
+    // loading info from database
         
         ref = Database.database().reference()
         
