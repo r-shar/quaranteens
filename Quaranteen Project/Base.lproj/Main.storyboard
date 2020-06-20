@@ -559,38 +559,6 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-JV-E5n">
-                                        <rect key="frame" x="15" y="39" width="83" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.35627689959999997" green="0.76815992590000004" blue="0.38637673849999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="growth 1">
-                                                <attributes>
-                                                    <color key="NSBackgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.20000000000000001" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" metaFont="toolTip"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-0U-c3f">
-                                        <rect key="frame" x="120" y="39" width="83" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.35627689959999997" green="0.76815992590000004" blue="0.38637673849999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="growth 2">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" metaFont="toolTip"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vector 115 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="kwL-Df-oiL">
                                         <rect key="frame" x="219" y="27" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -599,6 +567,55 @@
                                         <rect key="frame" x="0.0" y="5" width="267" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hun-AY-hm9">
+                                        <rect key="frame" x="15" y="44" width="152" height="14"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnk-V8-HxC" customClass="CustomLabel" customModule="Quaranteen_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="14"/>
+                                                <color key="backgroundColor" red="0.4510185122" green="0.76033669709999996" blue="0.45485061409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="growth1">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xi-hg-rjm">
+                                                <rect key="frame" x="54" y="0.0" width="44" height="14"/>
+                                                <color key="backgroundColor" red="0.45101886990000001" green="0.76429468389999999" blue="0.4548497796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="growth2">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vac-EI-cbg">
+                                                <rect key="frame" x="108" y="0.0" width="44" height="14"/>
+                                                <color key="backgroundColor" red="0.45101886990000001" green="0.76429468389999999" blue="0.4548497796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="growth3">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -620,8 +637,9 @@
                     <connections>
                         <outlet property="birthday" destination="nwA-hP-Y0n" id="gdK-Nk-4Oi"/>
                         <outlet property="frogName" destination="lU6-Fj-YQx" id="muB-vc-1xV"/>
-                        <outlet property="growth1" destination="Hrj-1e-Htw" id="YnM-lD-has"/>
-                        <outlet property="growth2" destination="Hrj-1e-Htw" id="Ijr-nT-07S"/>
+                        <outlet property="growth1" destination="nnk-V8-HxC" id="cla-jZ-wHi"/>
+                        <outlet property="growth2" destination="2xi-hg-rjm" id="ld7-nK-suX"/>
+                        <outlet property="growth3" destination="vac-EI-cbg" id="zbb-b7-ezT"/>
                         <outlet property="name" destination="bj7-d1-5k1" id="t69-98-tpQ"/>
                         <outlet property="profPic" destination="oLv-pD-IUn" id="Js2-6j-afy"/>
                     </connections>
@@ -635,7 +653,7 @@
             <objects>
                 <viewController id="Fh7-A1-Xyx" customClass="ProfileViewController" customModule="Quaranteen_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ua-jl-WmU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SkyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-UD-UAD">

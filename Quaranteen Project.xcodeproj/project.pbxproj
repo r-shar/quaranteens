@@ -21,6 +21,7 @@
 		2C51D3372484A89900643FCB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D3362484A89900643FCB /* EditProfileViewController.swift */; };
 		2C51D3532484D5D900643FCB /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D3522484D5D900643FCB /* BorderView.swift */; };
 		2C51D359248C637F00643FCB /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51D358248C637F00643FCB /* BorderImageView.swift */; };
+		2C5A4E35249D8BBA005EF82B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A4E34249D8BBA005EF82B /* CustomLabel.swift */; };
 		2CBAD468247B245F0010E94D /* SelectChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */; };
 		2CDC8943245E5ACC000B11E7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */; };
 		632441B951F0B880D27C8124 /* Pods_Quaranteen_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EC15DBE1AF1BA80493795B /* Pods_Quaranteen_Project.framework */; };
@@ -114,6 +115,13 @@
 			remoteGlobalIDString = 3347A1AB6546F0A3977529B8F199DC41;
 			remoteInfo = PromisesObjC;
 		};
+		2C5A4E4E249D8BBB005EF82B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CE79FC24688C7400AA56F8 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CF8FA5F01F446F01AAC7331075452AD;
+			remoteInfo = FirebaseStorage;
+		};
 		A414A86A245117F800F79EA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A414A84D245117F600F79EA8 /* Project object */;
@@ -185,6 +193,7 @@
 		2C51D3362484A89900643FCB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		2C51D3522484D5D900643FCB /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		2C51D358248C637F00643FCB /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
+		2C5A4E34249D8BBA005EF82B /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		2CBAD467247B245F0010E94D /* SelectChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChallengeViewController.swift; sourceTree = "<group>"; };
 		2CDC8942245E5ACC000B11E7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		690E9DAC297FE903D4F961E2 /* Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quaranteen_Project_Quaranteen_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +264,7 @@
 				2C2635282481CFF900C47A25 /* CustomTextField.swift */,
 				2C51D3522484D5D900643FCB /* BorderView.swift */,
 				2C51D358248C637F00643FCB /* BorderImageView.swift */,
+				2C5A4E34249D8BBA005EF82B /* CustomLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -365,6 +375,7 @@
 				1AC5FB2A247B7B5E00306057 /* FirebaseCoreDiagnostics.framework */,
 				1AC5FB2C247B7B5E00306057 /* FirebaseDatabase.framework */,
 				1AC5FB2E247B7B5E00306057 /* FirebaseInstallations.framework */,
+				2C5A4E4F249D8BBB005EF82B /* FirebaseStorage.framework */,
 				1AC5FB30247B7B5E00306057 /* GoogleDataTransport.framework */,
 				1AC5FB32247B7B5E00306057 /* GoogleDataTransportCCTSupport.framework */,
 				1AC5FB34247B7B5E00306057 /* GoogleUtilities.framework */,
@@ -593,6 +604,13 @@
 			remoteRef = 1AC5FB39247B7B5E00306057 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		2C5A4E4F249D8BBB005EF82B /* FirebaseStorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseStorage.framework;
+			remoteRef = 2C5A4E4E249D8BBB005EF82B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A4CE7A0724688C7400AA56F8 /* AppAuth.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -813,6 +831,7 @@
 				2C51D3372484A89900643FCB /* EditProfileViewController.swift in Sources */,
 				2CBAD468247B245F0010E94D /* SelectChallengeViewController.swift in Sources */,
 				A404687524809D8B009147D9 /* PTrackerViewController.swift in Sources */,
+				2C5A4E35249D8BBA005EF82B /* CustomLabel.swift in Sources */,
 				1AC5FB57247CB84E00306057 /* RoundButton.swift in Sources */,
 				2C51D3532484D5D900643FCB /* BorderView.swift in Sources */,
 				2C2635292481CFF900C47A25 /* CustomTextField.swift in Sources */,

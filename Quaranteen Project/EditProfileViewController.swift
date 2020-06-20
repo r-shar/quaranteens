@@ -18,8 +18,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var frogName: UITextField!
     @IBOutlet weak var profPic: UIImageView!
     
-    @IBOutlet weak var growth1: UIButton!
-    @IBOutlet weak var growth2: UIButton!
+    @IBOutlet weak var growth1: UILabel!
+    @IBOutlet weak var growth2: UILabel!
+    @IBOutlet weak var growth3: UILabel!
+    
     var imageURL: String = ""
     let datePicker = UIDatePicker()
     
@@ -50,10 +52,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         createDatePicker()
         
-        growth1.layer.masksToBounds = true
+        /*growth1.layer.masksToBounds = true
         growth1.layer.cornerRadius = 20
         growth2.layer.masksToBounds = true
-        growth2.layer.cornerRadius = 20
+        growth2.layer.cornerRadius = 20 */
         
         // Do any additional setup after loading the view.
     }
