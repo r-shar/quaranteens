@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xc-rI-dZh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -568,15 +568,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hun-AY-hm9">
-                                        <rect key="frame" x="15" y="44" width="152" height="14"/>
+                                        <rect key="frame" x="15" y="44" width="158.5" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnk-V8-HxC" customClass="CustomLabel" customModule="Quaranteen_Project" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="14.5"/>
                                                 <color key="backgroundColor" red="0.4510185122" green="0.76033669709999996" blue="0.45485061409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="growth1">
                                                         <attributes>
-                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <font key="NSFont" metaFont="label" size="12"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -589,12 +589,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xi-hg-rjm">
-                                                <rect key="frame" x="54" y="0.0" width="44" height="14"/>
+                                                <rect key="frame" x="54.5" y="0.0" width="47" height="14.5"/>
                                                 <color key="backgroundColor" red="0.45101886990000001" green="0.76429468389999999" blue="0.4548497796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="growth2">
                                                         <attributes>
-                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <font key="NSFont" metaFont="label" size="12"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -602,12 +602,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vac-EI-cbg">
-                                                <rect key="frame" x="108" y="0.0" width="44" height="14"/>
+                                                <rect key="frame" x="111.5" y="0.0" width="47" height="14.5"/>
                                                 <color key="backgroundColor" red="0.45101886990000001" green="0.76429468389999999" blue="0.4548497796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="growth3">
                                                         <attributes>
-                                                            <font key="NSFont" size="12" name="Quicksand-Light_Medium"/>
+                                                            <font key="NSFont" metaFont="label" size="12"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -834,8 +834,8 @@
                                         <rect key="frame" x="134" y="42" width="33" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipx-kx-fFu">
-                                        <rect key="frame" x="35" y="42" width="53" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipx-kx-fFu" userLabel="percentage">
+                                        <rect key="frame" x="35" y="42" width="91" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="27"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -894,24 +894,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="b55-Y4-dyX">
-                                <rect key="frame" x="31.5" y="302" width="351" height="32"/>
+                                <rect key="frame" x="20.5" y="300" width="373" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5u-10-bcc" userLabel="C1">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="fitness">
                                             <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOx-Po-TT9" userLabel="C2">
-                                        <rect key="frame" x="124" y="0.0" width="61" height="32"/>
+                                        <rect key="frame" x="129" y="0.0" width="65" height="34"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="cooking">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA0-Eu-ubn" userLabel="C3">
-                                        <rect key="frame" x="259" y="0.0" width="92" height="32"/>
+                                        <rect key="frame" x="268" y="0.0" width="105" height="34"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
                                         <state key="normal" title="arts &amp; crafts">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -999,6 +999,7 @@
                         <outlet property="devStage" destination="2l0-y0-ryS" id="pY5-aD-omP"/>
                         <outlet property="name" destination="vAr-7e-OzL" id="Zra-b8-YA4"/>
                         <outlet property="nameStage" destination="9XR-sF-7UA" id="ViJ-1W-JlC"/>
+                        <outlet property="percentage" destination="ipx-kx-fFu" id="yeO-PF-qd8"/>
                         <outlet property="profPic" destination="okI-WD-E32" id="nBJ-Iq-V7T"/>
                         <outlet property="streakStage" destination="u8g-LZ-Xgp" id="XlD-1p-Bm0"/>
                     </connections>

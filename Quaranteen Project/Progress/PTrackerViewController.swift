@@ -20,6 +20,7 @@ class PTrackerViewController: UIViewController {
     @IBOutlet weak var cCompletedStage: UILabel!
     @IBOutlet weak var profPic: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var percentage: UILabel!
     
     @IBOutlet weak var c1: UIButton!
     @IBOutlet weak var c2: UIButton!
@@ -27,6 +28,11 @@ class PTrackerViewController: UIViewController {
     
     @IBOutlet weak var nameStage: UILabel!
     
+    // get these values from array in database
+    // numTotal should be total challenges in category
+    // numComplete should be completed challenges in category
+    let numComplete = 2
+    let numT = 5
     
     
     override func viewDidLoad() {
@@ -53,13 +59,22 @@ class PTrackerViewController: UIViewController {
         
         cCompletedStage.backgroundColor = UIColor(red: 0.38, green: 0.58, blue: 0.95, alpha: 1.00)
         
+        let p = 100*numComplete/numT
+        print("percentage:", p)
+        percentage.text = String(p) + "%"
+        
         
         // draw track for progress to be laid on
         let trackLayer = CAShapeLayer()
         
-        let circularPath = UIBezierPath(arcCenter: .init(x: 310, y: 700), radius: 55, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPathTrack = UIBezierPath(arcCenter: .init(x: 310, y: 700), radius: 55, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         
-        trackLayer.path = circularPath.cgPath
+        let d = calcDeg(numChallengesDone: 2, numTotal: 5)
+        print("radians:", d)
+        
+        let circularPath = UIBezierPath(arcCenter: .init(x: 310, y: 700), radius: 55, startAngle: -CGFloat.pi / 2, endAngle: (d - (CGFloat.pi / 2) ), clockwise: true)
+        
+        trackLayer.path = circularPathTrack.cgPath
         
         
         trackLayer.strokeColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00).cgColor
@@ -88,7 +103,7 @@ class PTrackerViewController: UIViewController {
         let progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
         progressAnimation.toValue = 1
-        progressAnimation.duration = 2
+        progressAnimation.duration = 1
         progressAnimation.fillMode = CAMediaTimingFillMode.forwards
         progressAnimation.isRemovedOnCompletion = false
         
@@ -133,6 +148,15 @@ class PTrackerViewController: UIViewController {
                 
             }
         }
+    }
+    func calcDeg(numChallengesDone: CGFloat, numTotal: CGFloat) -> CGFloat {
+        let percentage = (numChallengesDone/numTotal)
+        let deg = percentage * 360
+        
+        // convert deg to radian
+        let rad = (CGFloat.pi/180) * deg
+        
+        return rad
     }
     
     func downloadImage(from url: URL) {
