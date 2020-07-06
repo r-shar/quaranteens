@@ -87,20 +87,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95425027610000002" green="0.59998601679999997" blue="0.2438066602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-iE-zKa">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Home" id="Bsn-ae-lo0">
-                                        <barButtonItem key="leftBarButtonItem" image="Arrow 1" id="Lli-El-tm8">
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="settingsIcon" id="EhG-J2-a5f">
-                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="streakBar4" translatesAutoresizingMaskIntoConstraints="NO" id="PCv-HT-pvE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="streakBar4" translatesAutoresizingMaskIntoConstraints="NO" id="PCv-HT-pvE">
                                 <rect key="frame" x="0.0" y="210" width="414" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="PMB-Tm-2h2"/>
@@ -127,7 +114,7 @@
                                     <constraint firstAttribute="height" constant="151" id="RTj-Zp-19o"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-mM-XER">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-mM-XER">
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-vX-MhH">
@@ -249,36 +236,30 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PCv-HT-pvE" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" constant="122" id="09l-oC-XnA"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="5As-zF-Xxw" secondAttribute="centerX" id="0GD-cd-ztl"/>
+                            <constraint firstItem="PCv-HT-pvE" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="16" id="41X-Mh-9AN"/>
                             <constraint firstItem="Fhy-5t-D75" firstAttribute="trailing" secondItem="Fba-mM-XER" secondAttribute="trailing" id="57c-rc-jMD"/>
                             <constraint firstItem="5As-zF-Xxw" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="9m0-1H-Ijv"/>
+                            <constraint firstItem="5As-zF-Xxw" firstAttribute="top" secondItem="Fba-mM-XER" secondAttribute="bottom" constant="29" id="CQx-Fj-xqd"/>
                             <constraint firstItem="8K0-v0-ZDl" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="155" id="F3Y-a3-tCX"/>
                             <constraint firstItem="Fba-mM-XER" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" id="Fz4-Gn-WbS"/>
                             <constraint firstItem="N6T-ZC-0zR" firstAttribute="top" secondItem="8K0-v0-ZDl" secondAttribute="bottom" constant="80" id="Hhm-Xy-6ZP"/>
                             <constraint firstItem="t0M-4C-hUn" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="52" id="Hpx-2x-JR4"/>
                             <constraint firstItem="5As-zF-Xxw" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="142" id="KjQ-q7-aGL"/>
                             <constraint firstItem="Fhy-5t-D75" firstAttribute="bottom" secondItem="t0M-4C-hUn" secondAttribute="bottom" constant="54" id="LIc-C8-HXS"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="leading" secondItem="PCv-HT-pvE" secondAttribute="leading" id="Mbo-7B-GRC"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="top" secondItem="d4D-EB-5VA" secondAttribute="topMargin" constant="-44" id="N1K-JB-SbJ"/>
                             <constraint firstItem="N6T-ZC-0zR" firstAttribute="leading" secondItem="Fhy-5t-D75" secondAttribute="leading" constant="196" id="NcZ-u4-8Jk"/>
                             <constraint firstItem="Fhy-5t-D75" firstAttribute="trailing" secondItem="N6T-ZC-0zR" secondAttribute="trailing" constant="36" id="Oa0-lf-0vG"/>
                             <constraint firstItem="t0M-4C-hUn" firstAttribute="top" secondItem="PCv-HT-pvE" secondAttribute="bottom" constant="70" id="Pjc-aG-z6r"/>
                             <constraint firstItem="N6T-ZC-0zR" firstAttribute="top" secondItem="5As-zF-Xxw" secondAttribute="bottom" constant="106" id="PlG-eW-c9N"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="trailing" secondItem="PCv-HT-pvE" secondAttribute="trailing" id="T75-8V-XCV"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="8K0-v0-ZDl" secondAttribute="centerX" id="UwX-ec-fFu"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="trailing" secondItem="Fba-mM-XER" secondAttribute="trailing" id="WK9-aa-lje"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="leading" secondItem="Fba-mM-XER" secondAttribute="leading" id="cTH-zW-VGC"/>
-                            <constraint firstItem="aQb-iE-zKa" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="ekG-zG-XZz"/>
-                            <constraint firstItem="5As-zF-Xxw" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" constant="79" id="gc7-8w-COu"/>
-                            <constraint firstItem="8K0-v0-ZDl" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" constant="114" id="hVQ-rC-nWg"/>
+                            <constraint firstItem="PCv-HT-pvE" firstAttribute="top" secondItem="d4D-EB-5VA" secondAttribute="top" constant="210" id="QjK-k9-efc"/>
                             <constraint firstItem="PCv-HT-pvE" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="hW3-EI-2A9"/>
-                            <constraint firstItem="Fba-mM-XER" firstAttribute="top" secondItem="aQb-iE-zKa" secondAttribute="bottom" id="jht-Q6-fLe"/>
+                            <constraint firstItem="PCv-HT-pvE" firstAttribute="top" secondItem="Fba-mM-XER" secondAttribute="bottom" constant="72" id="lPK-KT-t5q"/>
                             <constraint firstItem="8K0-v0-ZDl" firstAttribute="centerX" secondItem="t0M-4C-hUn" secondAttribute="centerX" id="u6R-jh-hD7"/>
+                            <constraint firstItem="8K0-v0-ZDl" firstAttribute="top" secondItem="Fba-mM-XER" secondAttribute="bottom" constant="64" id="zIE-hZ-5kQ"/>
+                            <constraint firstItem="8K0-v0-ZDl" firstAttribute="centerX" secondItem="Fba-mM-XER" secondAttribute="centerX" id="zco-4Y-B0d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fhy-5t-D75"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="Td8-Xh-fZV"/>
+                    <navigationItem key="navigationItem" id="Td8-Xh-fZV"/>
                     <connections>
                         <outlet property="addPicButton" destination="2yQ-dG-nRa" id="Kbv-Jk-jWy"/>
                         <outlet property="cardDes" destination="Kkv-Nv-c7J" id="glM-Se-VyP"/>
@@ -1299,7 +1280,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow 1" width="24" height="16"/>
         <image name="Component 1 (1)" width="128" height="128"/>
         <image name="Component 11" width="128" height="128"/>
         <image name="Component 2 (1)" width="128" height="128"/>
@@ -1327,7 +1307,6 @@
         <image name="miniFrog (1)" width="96" height="96"/>
         <image name="miniPi (1)" width="96" height="96"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="settingsIcon" width="32" height="32"/>
         <image name="streakBar4" width="375" height="29"/>
         <image name="superFrog" width="157" height="158"/>
     </resources>

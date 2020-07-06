@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import SWSegmentedControl
+import Firebase
+import FirebaseStorage
 
 struct Card {
     var num: Int
     var des: String
 }
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SWSegmentedControlDelegate  {
+     var ref: DatabaseReference!
+    @IBOutlet weak var sc: SWSegmentedControl!
     
     @IBOutlet weak var selectCatButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
@@ -38,17 +43,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var currentIndex = 0
     // create array of challenges
-    var foodChallenges: [String] = ["Cook a vegetarian meal for your family.", "Bake banana bread.", "Make Dalgona coffee.", "Make your own pasta."]
+    var cooking: [String] = ["Cook a vegetarian meal for your family.", "Bake banana bread.", "Make Dalgona coffee.", "Make your own pasta."]
     
-    var exerciseChallenges: [String] = ["Do mountain climbers for one minute.", "Do 20 pushups.", "Learn a tiktok dance.", "Go on a run around your neighborhood.", "Do 10 burpies followed by 20 squats."]
+    var fitness: [String] = ["Do mountain climbers for one minute.", "Do 20 pushups.", "Learn a tiktok dance.", "Go on a run around your neighborhood.", "Do 10 burpies followed by 20 squats."]
     
-    var connectChallenges: [String] = ["Reconnect with an old friend.", "Send an appreciation email to your favorite teacher.", "Video chat with your friends.", "Watch a movie with friends.", "Invite and play an online multiplayer game with your friends (check out Skribbl)."]
+    var connections: [String] = ["Reconnect with an old friend.", "Send an appreciation email to your favorite teacher.", "Video chat with your friends.", "Watch a movie with friends.", "Invite and play an online multiplayer game with your friends (check out Skribbl)."]
     
-    var mhChalenges: [String] = ["Journal for 15 minutes.", "Make a note of five things you are grateful for.", "Meditate for 15 minutes.", "Write a letter to your future self.", "Draw something random.", "Start a gratitude journal.", "Make a dream board.", "Write a letter to your past self.", "Meditate for 10 minutes.", "Say three affirmations.", "Go on a walk to increase endorphins.", "Spend an hour away from any screens."]
+    var mentalhealth: [String] = ["Journal for 15 minutes.", "Make a note of five things you are grateful for.", "Meditate for 15 minutes.", "Write a letter to your future self.", "Draw something random.", "Start a gratitude journal.", "Make a dream board.", "Write a letter to your past self.", "Meditate for 10 minutes.", "Say three affirmations.", "Go on a walk to increase endorphins.", "Spend an hour away from any screens."]
     
-    var workChallenges: [String] = ["Make a to-do list for the week (and try your best to follow through with it!)", "Read 30 pages (and try to do it daily!)", "Turn off your devices and focus on your work for an hour."]
+    var productivity: [String] = ["Make a to-do list for the week (and try your best to follow through with it!)", "Read 30 pages (and try to do it daily!)", "Turn off your devices and focus on your work for an hour."]
     
-    var diyChallenges: [String] = ["Try following an origami video.", "Draw your favorite movie or TV show character.", "Draw a self portrait."]
+    var artsNCrafts: [String] = ["Try following an origami video.", "Draw your favorite movie or TV show character.", "Draw a self portrait."]
     
     
     
@@ -56,9 +61,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         // Do any additional setup after loading the view, typically from a nib.
-        createCards(catArray: foodChallenges)
+        createCards(catArray: cooking)
         
        // readCardsFromDisk()       DON'T NEED THIS YET, MAYBE LATER WHEN TRACKING PROGRESS
         
@@ -87,7 +92,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         selectCatButton.backgroundColor = UIColor(red: 0.33, green: 0.77, blue: 0.42, alpha: 1.00)
         
+        ref = Database.database().reference()
+        
+        let userID = Auth.auth().currentUser?.uid ?? ""
+        
+        if (!userID.isEmpty) {
+            
+            ref.child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
+                
+                let value = snapshot.value as? NSDictionary
+        
+                
+                let challengeTypes = value?["challenges"] as? [String] ?? []
+                
+                let sc = SWSegmentedControl(items: [challengeTypes[0], challengeTypes[1], challengeTypes[2]])
+                
+                sc.delegate = self
+                sc.selectedSegmentIndex = 1
+                sc.frame = CGRect(x: 0, y: 40, width: 430, height: 60)
+                sc.center.x = self.view.center.x
+                sc.indicatorColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
+                sc.titleColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
+                sc.font = UIFont(name: "Quicksand-Light_Bold", size: 15.0)!
+                
+                self.view.addSubview(sc)
+                }
+            }
+            
+            
+                
     }
+            
     
     @IBOutlet var doneView: UIView!
     
@@ -222,86 +257,97 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    @IBAction func handleSelection(_ sender: UIButton) {
-        challengeButtons.forEach { (button) in
-            UIView.animate(withDuration: 0.2) {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            }
+//    @IBAction func handleSelection(_ sender: UIButton) {
+//        challengeButtons.forEach { (button) in
+//            UIView.animate(withDuration: 0.2) {
+//                button.isHidden = !button.isHidden
+//                self.view.layoutIfNeeded()
+//            }
+//        }
+//    }
+//
+//    //what to do when a challenge category is selected
+//    // we want to display different challenge deck (switch array)
+//    enum Categories: String {
+//        case artsNCrafts = "arts & crafts"
+//        case cooking = "cooking"
+//        case connections = "connections"
+//        case fitness = "fitness"
+//        case mentalHealth = "mental health"
+//        case productivity = "productivity"
+//    }
+//    @IBAction func cityTapped(_ sender: UIButton) {
+//        guard let categoryTitle = sender.currentTitle, let category = Categories(rawValue: categoryTitle) else {
+//            return
+//        }
+//
+//        switch category {
+//        case .artsNCrafts:
+//            selectCatButton.setTitle("ARTS & CRAFTS", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: diyChallenges)
+//            updateLabels()
+//            updateDoneButton()
+//        case .connections:
+//            selectCatButton.setTitle("CONNECTIONS", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: connectChallenges)
+//            updateLabels()
+//            updateDoneButton()
+//        case .cooking:
+//            selectCatButton.setTitle("COOKING", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: foodChallenges)
+//            updateLabels()
+//            updateDoneButton()
+//        case .fitness:
+//            selectCatButton.setTitle("FITNESS", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: exerciseChallenges)
+//            updateLabels()
+//            updateDoneButton()
+//        case .mentalHealth:
+//            selectCatButton.setTitle("MENTAL HEALTH", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: mhChalenges)
+//            updateLabels()
+//            updateDoneButton()
+//        case .productivity:
+//            selectCatButton.setTitle("PRODUCTIVITY", for: .normal)
+//            challenges.removeAll()
+//            currentIndex = 0
+//
+//            createCards(catArray: workChallenges)
+//            updateLabels()
+//            updateDoneButton()
+//        }
+//    challengeButtons.forEach { (button) in
+//        UIView.animate(withDuration: 0.2) {
+//            button.isHidden = !button.isHidden
+//            self.view.layoutIfNeeded()
+//        }
+//    }
+//    }
+    
+    func selectCat(_ sender: Any){
+        if sc.selectedSegmentIndex == 1 {
+            challenges.removeAll()
+            currentIndex = 0
+        
+            var challType: String
+            
         }
     }
     
-    //what to do when a challenge category is selected
-    // we want to display different challenge deck (switch array)
-    enum Categories: String {
-        case artsNCrafts = "arts & crafts"
-        case cooking = "cooking"
-        case connections = "connections"
-        case fitness = "fitness"
-        case mentalHealth = "mental health"
-        case productivity = "productivity"
-    }
-    @IBAction func cityTapped(_ sender: UIButton) {
-        guard let categoryTitle = sender.currentTitle, let category = Categories(rawValue: categoryTitle) else {
-            return
-        }
-        
-        switch category {
-        case .artsNCrafts:
-            selectCatButton.setTitle("ARTS & CRAFTS", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: diyChallenges)
-            updateLabels()
-            updateDoneButton()
-        case .connections:
-            selectCatButton.setTitle("CONNECTIONS", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: connectChallenges)
-            updateLabels()
-            updateDoneButton()
-        case .cooking:
-            selectCatButton.setTitle("COOKING", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: foodChallenges)
-            updateLabels()
-            updateDoneButton()
-        case .fitness:
-            selectCatButton.setTitle("FITNESS", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: exerciseChallenges)
-            updateLabels()
-            updateDoneButton()
-        case .mentalHealth:
-            selectCatButton.setTitle("MENTAL HEALTH", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: mhChalenges)
-            updateLabels()
-            updateDoneButton()
-        case .productivity:
-            selectCatButton.setTitle("PRODUCTIVITY", for: .normal)
-            challenges.removeAll()
-            currentIndex = 0
-            
-            createCards(catArray: workChallenges)
-            updateLabels()
-            updateDoneButton()
-        }
-    challengeButtons.forEach { (button) in
-        UIView.animate(withDuration: 0.2) {
-            button.isHidden = !button.isHidden
-            self.view.layoutIfNeeded()
-        }
-    }
-    }
     
 }

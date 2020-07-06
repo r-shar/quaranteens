@@ -25,10 +25,6 @@ class PTrackerViewController: UIViewController, SWSegmentedControlDelegate {
     @IBOutlet weak var percentage: UILabel!
     
     
-    @IBOutlet weak var c1: UILabel!
-    @IBOutlet weak var c2: UILabel!
-    @IBOutlet weak var c3: UILabel!
-    
     @IBOutlet weak var nameStage: UILabel!
     
     // get these values from array in database
@@ -143,12 +139,9 @@ class PTrackerViewController: UIViewController, SWSegmentedControlDelegate {
                 // can't edit my challenges rn
                 
                 self.name.text = name
-//                self.c1.text = challenges[0]
-//                self.c2.text = challenges[1]
-//                self.c3.text = challenges[2]
                 
-//                let segmentedControl = SWSegmentedControl(items: [challenges[0], challenges[1], challenges[2]])
-                let segmentedControl = SWSegmentedControl(items: ["fitness", "mental health", "arts & crafts"])
+                let segmentedControl = SWSegmentedControl(items: [challenges[0], challenges[1], challenges[2]])
+                
                 
                 segmentedControl.delegate = self
                 
