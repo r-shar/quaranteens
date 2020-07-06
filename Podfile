@@ -12,6 +12,7 @@ target 'Quaranteen Project' do
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
+  pod 'SWSegmentedControl'
 
   
   # Pod for segmented nav bar

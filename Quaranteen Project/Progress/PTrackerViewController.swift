@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import SWSegmentedControl
 
-class PTrackerViewController: UIViewController {
+class PTrackerViewController: UIViewController, SWSegmentedControlDelegate {
    
     
     var ref: DatabaseReference!
+    @IBOutlet weak var segmentedControl: SWSegmentedControl!
     
     @IBOutlet weak var devStage: UILabel!
     @IBOutlet weak var streakStage: UILabel!
@@ -22,9 +24,10 @@ class PTrackerViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var percentage: UILabel!
     
-    @IBOutlet weak var c1: UIButton!
-    @IBOutlet weak var c2: UIButton!
-    @IBOutlet weak var c3: UIButton!
+    
+    @IBOutlet weak var c1: UILabel!
+    @IBOutlet weak var c2: UILabel!
+    @IBOutlet weak var c3: UILabel!
     
     @IBOutlet weak var nameStage: UILabel!
     
@@ -140,9 +143,28 @@ class PTrackerViewController: UIViewController {
                 // can't edit my challenges rn
                 
                 self.name.text = name
-                self.c1.setTitle(challenges[0], for: .normal)
-                self.c2.setTitle(challenges[1], for: .normal)
-                self.c3.setTitle(challenges[2], for: .normal)
+//                self.c1.text = challenges[0]
+//                self.c2.text = challenges[1]
+//                self.c3.text = challenges[2]
+                
+//                let segmentedControl = SWSegmentedControl(items: [challenges[0], challenges[1], challenges[2]])
+                let segmentedControl = SWSegmentedControl(items: ["fitness", "mental health", "arts & crafts"])
+                
+                segmentedControl.delegate = self
+                
+                segmentedControl.selectedSegmentIndex = 1
+                
+                segmentedControl.frame = CGRect(x: 0, y: 290, width: 430, height: 60)
+                
+                segmentedControl.center.x = self.view.center.x
+                segmentedControl.indicatorColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
+                segmentedControl.titleColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
+                
+                segmentedControl.font = UIFont(name: "Quicksand-Light_Bold", size: 15.0)!
+                
+                
+                self.view.addSubview(segmentedControl)
+              
                 
                 self.nameStage.text = frogName + "\'s Stage"
                 
