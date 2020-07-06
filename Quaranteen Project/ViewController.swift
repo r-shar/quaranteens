@@ -18,6 +18,8 @@ struct Card {
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SWSegmentedControlDelegate  {
      var ref: DatabaseReference!
+   
+    
     @IBOutlet weak var sc: SWSegmentedControl!
     
     @IBOutlet weak var selectCatButton: UIButton!
@@ -108,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let sc = SWSegmentedControl(items: [challengeTypes[0], challengeTypes[1], challengeTypes[2]])
                 
                 sc.delegate = self
-                sc.selectedSegmentIndex = 1
+                sc.selectedSegmentIndex = 0
                 sc.frame = CGRect(x: 0, y: 40, width: 430, height: 60)
                 sc.center.x = self.view.center.x
                 sc.indicatorColor = UIColor(red: 0.93, green: 0.46, blue: 0.18, alpha: 1.00)
@@ -339,15 +341,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //    }
 //    }
     
-    func selectCat(_ sender: Any){
-        if sc.selectedSegmentIndex == 1 {
-            challenges.removeAll()
-            currentIndex = 0
-        
-            var challType: String
-            
-        }
+    func segmentedControl(_ control: SWSegmentedControl, didDeselectItemAtIndex index: Int) {
+        print("did deselect \(index)")
+
+        challenges.removeAll()
+        currentIndex = 0
+
+//        print(sc.items[index+1])
+
+
+
     }
-    
     
 }
